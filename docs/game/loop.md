@@ -33,11 +33,12 @@ Drive into the tunnel. While inside:
 ## 4. Run end
 
 - **Lose:** the car is destroyed → death screen → back to the hub. *(What happens to carried loot on death is an [open question](../project/open-questions.md).)*
-- **Win:** ❓ **Undecided.** There is currently no win condition implemented, no extraction point, no "run complete" state. This is the single biggest open design question. See [Open Questions](../project/open-questions.md).
+- **Finish:** ✅ implemented, mechanically. The level has a **start zone** and an **end zone** (level gate / return gate: detect + countdown); reaching the end zone puts you back into the hub. A→B works.
+- **Goal:** ❓ **Undecided.** Reaching B doesn't *mean* anything yet, no reward for arriving, no pressure on the way, no reason to hurry or to detour. The skeleton is done; the stakes are the open design question. See [Open Questions](../project/open-questions.md).
 
 ## 5. Back in the hub
 
 Sell loot → buy upgrades → repair → pick modifiers → go again. Currency and unlocks persist; the loop is the game.
 
 !!! warning "The missing piece"
-    Everything above the "Run end" section exists in the game today. The loop currently has no *ending*, you can enter, fight, loot, and die, but not finish. Deciding what ends a run (extraction pressure? reaching the far end? boss kill?) shapes every level-design decision downstream.
+    The full loop (hub → run → end zone → hub) exists in the game today. What's missing is the *why*: what makes reaching the end zone matter, and what turns the drive in between into a run worth repeating. That decision (extraction pressure vs. authored gauntlet, see [Open Questions](../project/open-questions.md)) shapes every level-design decision downstream.

@@ -4,14 +4,14 @@ Things not yet decided. When one gets answered, move it to the [Decision Log](de
 
 ## Blocking level design
 
-### 1. What ends a run? ⭐ *the big one*
+### 1. What makes a run matter? ⭐ *the big one*
 
-There is currently no win condition in the game. Two shapes fit what's already built:
+The mechanical loop is done: start zone → end zone → back to hub (A→B works). But reaching B means nothing yet, no reward for arriving, no pressure on the way, no goal. Two shapes fit what's already built:
 
-- **Extraction-shaped:** drive in, loot, something turns the screws (time? escalating spawns? a "storm"?), get out or lose what you're carrying. Fits the existing loot/sell/upgrade economy. Leads to loop/branch tunnel networks.
+- **Extraction-shaped:** drive in, loot, something turns the screws (time? escalating spawns? a "storm"?), get out through the end zone or lose what you're carrying. Fits the existing loot/sell/upgrade economy. Leads to loop/branch tunnel networks.
 - **Linear gauntlet:** authored corridor, reach the end, beat the boss. Fits the existing boss and hand-placed pacing. Leads to one authored route per level.
 
-The answer shapes the tunnel layout, the economy stakes, and what "pressure" means. **Decide before building more level.**
+Either way the existing end-zone gate is the finish line; the question is what gives the drive to it stakes. The answer shapes the tunnel layout, the economy stakes, and what "pressure" means. **Decide before building more level.**
 
 ### 2. What do you lose on death?
 
