@@ -46,20 +46,24 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 
 ## Chores
 
-- [ ] **Main menu layout fix:** reparent SubViewportContainer out of RightLabel, Full Rect anchors (editor, ~5 min; diagnosis in session notes)
 - [ ] ⛔ **Project stretch mode:** add window/stretch canvas_items + expand to project.godot; waiting until the background code sessions land, then glance over every UI scene once
 - [ ] **Merge `audit/2026-07-cleanup` into main:** after running the game on the branch once
 - [ ] **Rename schop_screen.tscn → shop_screen_panel or similar:** editor rename so references update
 - [ ] **Remove level_test_texutures from world.tscn:** editor; drags an 11 MB collision shape with it
 - [ ] **External_Carp terrain pack decision:** 49 MB, unknown licence, no references found; verify Terrain3D doesn't need it, then delete
 - [ ] **Delete Audio/Recall.mp3 if unused:** verify in editor first
-- [ ] **.git history rewrite:** 1.2 GB of VoxelGI-era bloat; needs git filter-repo + coordinated re-clone by both devs
+- [ ] **.git history rewrite:** 1.2 GB of VoxelGI-era bloat (hub.tscn alone: five 52 MB ancestors); needs git filter-repo + coordinated re-clone by both devs
+
+## Parked (someday, after the game is fun)
+
+- [ ] **Rebuild menu visuals:** menu was stripped to bare buttons (2026-07) after the 52 MB embedded 3D showcase broke layout and dragged netcode into the menu. Design a proper look when the game underneath deserves it
 
 ## Done
 
 *(Move checked items here with a date, it feels good and it's useful history.)*
 
 - [x] Already built (confirmed by code audit 2026-07-04): **nitro boost** (3 charges, exhaust VFX), **car jump** (Q, dust VFX), **flamethrower** (fuel system, 50 DPS), **rocket pot** (4-tube launcher), **rocket thrust** (charge-based, phased burn), **stasis cargo lock**, **level/return gates** (incl. objective unlock hook), **horde manager** (ghost promotion/demotion by distance), **wear shader** (visual side), **item behaviors** (armor plate, repair kit, bomb)
+- [x] 2026-07: Main menu stripped and rebuilt as clean scene (52 MB → 2 KB); layout bug fixed, car/drone netcode removed from menu
 - [x] 2026-07: Design wiki built and live at cap7n.github.io/otr-docs
 - [x] 2026-07: Full project audit; 170 dead files removed on `audit/2026-07-cleanup`
 - [x] 2026-07: Start/end zone gates confirmed working (A→B→hub loop closed)
