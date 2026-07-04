@@ -1,6 +1,6 @@
 # Run Modifiers
 
-*Status: planned, lower priority, build after the core loop is solid. Source: `run_modifiers_plan.md`.*
+*Status: planned, confirmed NOT built (code audit 2026-07-04). Lower priority: build after the core loop is solid.*
 
 ## What
 

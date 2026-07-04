@@ -1,6 +1,6 @@
 # Shortcut Paths
 
-*Status: planned. Source: `shortcut_paths_plan.md`.*
+*Status: planned, confirmed NOT built (code audit 2026-07-04). No chest, no timed gate, no ping system; junk_barricade/locked_gate exist but as main-path obstacles, not optional side paths.*
 
 ## What
 

@@ -34,8 +34,7 @@ Together: earn it, risk it, lose it. That is the engagement loop.
 
 - **Are car abilities (jump, wall-drive) unlocked from the start or bought as CAR_MODs?**
 - **Is cargo space limited?** If yes, "what do we keep" becomes a co-op negotiation.
-- **Jump input:** Space conflicts with handbrake. Tap/hold split, or separate key (Q)?
-- **`R` key conflict:** wall-drive vs. fire rocket, one has to move.
+- **`R` key conflict:** wall-drive toggle vs. rocket pot fire, both on R, one has to move before wall-drive is re-enabled. *(Jump input resolved: it shipped on Q.)*
 - **Art style:** post-processing is in place, but the overall art direction is undecided. Discuss before implementing.
 
 ## Technical (needs testing, not discussion)

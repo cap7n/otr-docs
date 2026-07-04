@@ -1,6 +1,6 @@
 # Car Abilities, Nitro, Jump & Wall-Drive
 
-*Status: planned. Source: `car_abilities_plan.md`.*
+*Status (verified against code 2026-07-04): **nitro and jump are BUILT and live**, charges, cooldowns, VFX, inputs all wired. **Wall-drive is fully coded but switched off**: its `setup()` call is commented out in car.gd:334, re-enabling and testing is a [backlog quick win](../project/backlog.md). Also built but never documented here: flamethrower, 4-tube rocket pot, rocket thrust, and drift (also switched off, car.gd:329). This page stays as the design reference.*
 
 ## Goals
 

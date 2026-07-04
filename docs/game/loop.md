@@ -34,6 +34,7 @@ Drive into the tunnel. While inside:
 
 - **Lose:** the car is destroyed → death screen → back to the hub. *(What happens to carried loot on death is an [open question](../project/open-questions.md).)*
 - **Finish:** ✅ implemented, mechanically. The level has a **start zone** and an **end zone** (level gate / return gate: detect + countdown); reaching the end zone puts you back into the hub. A→B works.
+- **Bonus discovery (code audit 2026-07):** the return gate is **locked by default** and exposes `unlock()`, meant to be called "when the level's objective is complete". The mounting point for a run goal already exists in code; nothing calls it yet.
 - **Goal:** ❓ **Undecided.** Reaching B doesn't *mean* anything yet, no reward for arriving, no pressure on the way, no reason to hurry or to detour. The skeleton is done; the stakes are the open design question. See [Open Questions](../project/open-questions.md).
 
 ## 5. Back in the hub

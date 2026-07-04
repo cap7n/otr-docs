@@ -1,6 +1,6 @@
 # Environmental Hazards
 
-*Status: planned. Source: `environmental_hazards_plan.md`.*
+*Status: planned, confirmed NOT built (code audit 2026-07-04). None of the six hazards exist in code; junk_barricade and locked_gate are destructible obstacles, not hazards.*
 
 ## What
 

@@ -29,7 +29,9 @@ Every encounter, hazard, and secret is designed to ask two questions at once: *w
 | Enemies (melee, flying, ranged, boss, turrets) | ✅ Working |
 | Hub with shop, loot, cargo stasis | ✅ Working |
 | Tunnel level (round1_a) | 🚧 Built, needs pacing & atmosphere |
-| Car abilities (nitro, jump, wall-drive) | 📋 Planned |
+| Run gates (start zone → end zone → hub) | ✅ Working, incl. objective unlock hook |
+| Car abilities: nitro, jump, flamethrower, rockets | ✅ Built and live |
+| Car abilities: wall-drive, drift | ⚠️ Coded, switched off (setup commented out) |
 | Environmental hazards | 📋 Planned |
 | Shortcuts & secret paths | 📋 Planned |
 | Run modifiers | 📋 Planned |

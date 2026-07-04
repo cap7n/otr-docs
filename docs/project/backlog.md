@@ -4,22 +4,28 @@ Things we've said **yes** to that aren't built yet. Not to be confused with [Ope
 
 Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another item · unmarked = ready to pick up.
 
+*Statuses verified against code, 2026-07-04. If a doc and the code disagree, the code wins.*
+
+## Quick wins (code exists, one switch away)
+
+- [ ] **Re-enable wall-drive:** controller is complete and wired, but `setup()` is commented out (car.gd:334). Re-enable, test Jolt gravity redirect on a ramp, then build zones in levels
+- [ ] **Re-enable drift:** same story, complete controller, `setup()` commented out (car.gd:329)
+- [ ] **Wire visual wear to damage:** the wear shader system (scratches/rust/dirt) is built and synced, but nothing increments it during gameplay; hook it to car damage events
+
 ## Gameplay systems
 
-- [ ] **Nitro boost:** first car ability, simplest, enables speed-gated level design ([plan](../systems/car-abilities.md))
-- [ ] **Car jump:** grounded-only impulse; input conflict (Space = handbrake) must be resolved first ⛔ [open question](open-questions.md)
-- [ ] **Wall-drive prototype:** test Jolt per-body gravity on a simple ramp BEFORE building zones ([plan](../systems/car-abilities.md))
-- [ ] **First hazards: steam vent + fire patch:** simplest two from the [hazards plan](../systems/hazards.md)
+- [ ] **First hazards: steam vent + fire patch:** none of the six hazards exist in code ([hazards plan](../systems/hazards.md))
 - [ ] **Remaining hazards:** falling rocks, flooded zone, collapsing floor, swinging obstacles
-- [ ] **First shortcut: destructible wall + side path:** reuses barricade system ([plan](../systems/shortcuts.md))
-- [ ] **Interactable loot chest:** opens on E, loot table, server-authoritative
-- [ ] **Gate countdown UI:** TODOs already in level_gate.gd and return_gate.gd
-- [ ] **Save file:** user:// ConfigFile autoload for currency + unlocks; prerequisite for junker and modifier unlocks
+- [ ] **First shortcut: destructible wall + side path:** junk_barricade/locked_gate exist as main-path obstacles; the optional side-path variant doesn't ([plan](../systems/shortcuts.md))
+- [ ] **Interactable loot chest:** opens on E, loot table, server-authoritative; no chest entity exists yet
+- [ ] **Gate countdown UI:** logic done, TODOs in level_gate.gd and return_gate.gd are display-only
+- [ ] **Wire an objective to return_gate.unlock():** the gate already supports "locked until objective complete", nothing calls it yet; this is where the run's goal plugs in
+- [ ] **Save file:** user:// ConfigFile autoload for currency + unlocks; confirmed absent, prerequisite for junker and modifier unlocks
 - [ ] ⛔ **Junker package:** unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the stakes decision ([open question 2](open-questions.md))
 - [ ] ⛔ **Loot-dies-with-you + repair costs:** blocked on the same stakes decision
 - [ ] **Flank enemy:** paces alongside the car in bursts, the honest "keeps up" enemy ([threat directions](../game/enemies.md))
-- [ ] **Run modifiers:** after core loop is solid ([plan](../systems/modifiers.md))
-- [ ] **Callout/ping system:** gunner marks shortcuts and threats for the driver
+- [ ] **Run modifiers:** confirmed absent; after core loop is solid ([plan](../systems/modifiers.md))
+- [ ] **Callout/ping system:** confirmed absent; gunner marks shortcuts and threats for the driver
 - [ ] **Boss rework:** benched; doesn't feel good yet, needs love before any route depends on it
 
 ## Level design
@@ -53,6 +59,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 
 *(Move checked items here with a date, it feels good and it's useful history.)*
 
+- [x] Already built (confirmed by code audit 2026-07-04): **nitro boost** (3 charges, exhaust VFX), **car jump** (Q, dust VFX), **flamethrower** (fuel system, 50 DPS), **rocket pot** (4-tube launcher), **rocket thrust** (charge-based, phased burn), **stasis cargo lock**, **level/return gates** (incl. objective unlock hook), **horde manager** (ghost promotion/demotion by distance), **wear shader** (visual side), **item behaviors** (armor plate, repair kit, bomb)
 - [x] 2026-07: Design wiki built and live at cap7n.github.io/otr-docs
 - [x] 2026-07: Full project audit; 170 dead files removed on `audit/2026-07-cleanup`
 - [x] 2026-07: Start/end zone gates confirmed working (A→B→hub loop closed)

@@ -12,11 +12,14 @@ Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot)
 |---|---|---|
 | Steer | A / D | |
 | Accelerate / brake | W / S | Auto-shifts between drive and reverse at standstill |
-| Handbrake | Space | |
-| Nitro boost | Shift | *(planned)* Charge-based burst of speed |
-| Car jump | Q | *(planned)* Upward impulse, grounded only |
-| Wall-drive | zone-triggered | *(planned)* Gravity shifts to drive on walls/ceilings |
-| Flamethrower | F | Front-facing cone, continuous while held |
+| Handbrake | Space | Also available to the passenger (seat-shared) |
+| Nitro boost | Shift | ✅ Built: 3 charges, 1.5s burst, exhaust VFX |
+| Car jump | Q | ✅ Built: grounded-only impulse, dust VFX |
+| Rocket pot | R | ✅ Built: 4-tube launcher, cyclic fire, per-tube cooldown |
+| Rocket thrust | N | ✅ Built: charge-based phased burn, nose-down force |
+| Flamethrower | F | ✅ Built: fuel system (100 max, regen), 50 DPS cone |
+| Wall-drive | R (toggle) | ⚠️ Coded but switched off: setup() commented out (car.gd:334). Input conflicts with rocket pot |
+| Drift | via handbrake | ⚠️ Coded but switched off: setup() commented out (car.gd:329) |
 
 ## Gunner (turret)
 
