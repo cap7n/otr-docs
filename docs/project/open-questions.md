@@ -23,6 +23,8 @@ First playtests confirmed it: without something to lose, the game doesn't grip, 
 
 Together: earn it, risk it, lose it. That is the engagement loop.
 
+**Implementation readiness (checked 2026-07):** the car's ability architecture is already modular (each ability is a self-contained controller node on the car), so the junker is cheap to build. Missing pieces, ~a day of work: (1) an `unlocked` flag + early-return per ability controller, synced to the other peer; (2) actual CAR_MOD items, the category exists as an enum only, zero items use it; (3) a save file, nothing persists to disk yet, currency included. The save system is needed for the run-modifier unlock plans anyway.
+
 ## Setting (see [Setting & Vertical Scale](../level-design/setting-and-scale.md))
 
 - **Who built the underground world and what happened to them?** Mining colony that dug too deep / wartime bunker-city / failed corporate arcology. Each implies different signage, machine types, and what the enemies are. Pick enough to keep props consistent, no novel required.
