@@ -1,0 +1,54 @@
+site_name: OTR — Design Wiki
+site_url: https://cap7n.github.io/otr-docs/
+site_description: Design wiki for OTR, a 2-player co-op car game.
+repo_url: https://github.com/cap7n/otr-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep orange
+    accent: amber
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - The Game:
+      - Game Loop: game/loop.md
+      - What Players Can Do: game/player-verbs.md
+      - Enemies & Obstacles: game/enemies.md
+      - Economy & Loot: game/economy.md
+  - Systems (Plans):
+      - Car Abilities: systems/car-abilities.md
+      - Environmental Hazards: systems/hazards.md
+      - Shortcut Paths: systems/shortcuts.md
+      - Run Modifiers: systems/modifiers.md
+  - Level Design:
+      - The Tunnels: level-design/tunnels.md
+  - Project:
+      - Decision Log: project/decisions.md
+      - Open Questions: project/open-questions.md
+      - Roadmap: project/roadmap.md
+      - How to Edit This Wiki: project/how-to-edit.md
