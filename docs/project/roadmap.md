@@ -29,7 +29,7 @@ Rough sequencing. The project runs issue-driven, solve one system, ship it, move
 - Car jump; wall-drive prototype (Jolt gravity test first)
 - Remaining hazards; collapsing floor set-pieces
 - Loot rooms, timed gates, risk/reward forks
-- Boss integration into the route climax
+- Boss rework (benched 2026-07: does not feel good yet); route climaxes use hordes/set-pieces meanwhile
 - Callout/ping system for co-op communication
 
 ## Later, replayability & polish

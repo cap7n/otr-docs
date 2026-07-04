@@ -13,9 +13,15 @@ The mechanical loop is done: start zone → end zone → back to hub (A→B work
 
 Either way the existing end-zone gate is the finish line; the question is what gives the drive to it stakes. The answer shapes the tunnel layout, the economy stakes, and what "pressure" means. **Decide before building more level.**
 
-### 2. What do you lose on death?
+### 2. Stakes: what do you have to lose? (proposal on the table, 2026-07)
 
-Carried loot? Everything since the hub? Nothing? Defines run tension and how much extraction matters.
+First playtests confirmed it: without something to lose, the game doesn't grip, even its own devs. Proposed package, built entirely from existing systems, awaiting both devs' sign-off:
+
+1. **Loot dies with you.** Cargo in the stasis box only becomes yours at the hub. Makes the final stretch with a full box tense, and detours a real decision.
+2. **Repairs cost currency.** Car health already persists between runs; price the damage.
+3. **Start with a junker.** Weak engine, no nitro/flamethrower, basic turret. Abilities and power are bought as CAR_MOD items (this would answer the "unlocked vs bought" question below: bought). Rule: underpowered must never mean unresponsive, weak stats with good feel.
+
+Together: earn it, risk it, lose it. That is the engagement loop.
 
 ## Setting (see [Setting & Vertical Scale](../level-design/setting-and-scale.md))
 
