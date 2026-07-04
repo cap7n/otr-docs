@@ -30,7 +30,6 @@ Without modifiers, every run plays the same. Risk/reward trade-offs give skilled
 | **Speed Demon** | Top speed +40%, braking −50% |
 | **Glass Cannon** | Turret damage ×2, car damage taken ×1.5 |
 | **Scavenger** | No shop this run, loot drops ×3 |
-| **Lone Wolf** | Turret auto-aims (weaker); one player controls everything |
 | **Bomber Run** | Start with 5 bombs; enemies drop bombs instead of loot |
 | **Heavyweight** | Car mass ×2, tankier, slower, devastating rams |
 
