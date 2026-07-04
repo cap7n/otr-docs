@@ -46,8 +46,10 @@ nav:
       - Shortcut Paths: systems/shortcuts.md
       - Run Modifiers: systems/modifiers.md
   - Level Design:
+      - Setting & Vertical Scale: level-design/setting-and-scale.md
       - The Tunnels: level-design/tunnels.md
   - Project:
+      - Backlog: project/backlog.md
       - Decision Log: project/decisions.md
       - Open Questions: project/open-questions.md
       - Roadmap: project/roadmap.md
