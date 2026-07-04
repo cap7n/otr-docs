@@ -30,7 +30,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 
 ## Level design
 
-- [ ] **First authored route in round1_a:** session-style beats between the existing start/end gates: opening encounter, complication, fork, climax (horde or set-piece, not boss), exit ([The Tunnels](../level-design/tunnels.md))
+- [ ] **First authored route (new level):** session-style beats between start/end gates: opening encounter, complication, fork, climax (horde or set-piece, not boss), exit. round1_a is a tech demo, not the target; the route likely starts as tunnel blockout ([The Tunnels](../level-design/tunnels.md))
 - [ ] **Cavern lighting test:** one gray-box cavern: baked LightmapGI + volumetric fog + light shafts + distant emissives; proves the megalophobia works ([Setting & Scale](../level-design/setting-and-scale.md))
 - [ ] **Tunnel kit cross-section profile:** the one profile all modular pieces share; decide before modeling any kit piece
 - [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove

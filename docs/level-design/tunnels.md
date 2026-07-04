@@ -1,6 +1,6 @@
 # The Tunnels
 
-*The active level-design work. Current level: `round1_a.tscn`. An older prototype (`tunnel_level.tscn`) is archived in the project root.*
+*The active level-design work. No tunnel level exists yet: `round1_a.tscn` is an outdoor tech demo/testbed (it proved gates, hordes, and terrain), and the old `tunnel_level.tscn` prototype was removed in the July 2026 cleanup (recoverable from git history). The real level starts with the kit profile and blockout.*
 
 ## Why tunnels
 
@@ -46,7 +46,8 @@ The target feel: headlights cutting through fog in the dark. Assets on hand: tun
 
 ## Status
 
-- [x] Tunnel level exists (`round1_a.tscn`) with enemies, loot, hub connection
+- [x] Tech demo level (round1_a) proved the loop: gates, spawns, enemies, loot, hub connection
+- [ ] Tunnel level itself, not started
 - [ ] Win condition / run ending, **undecided, blocks route design**
 - [ ] Hazards placed
 - [ ] Shortcuts / forks placed
