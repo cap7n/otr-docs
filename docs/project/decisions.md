@@ -4,6 +4,8 @@ Decisions that shape the game, newest first. When something gets decided in a de
 
 | Date | Decision | Why |
 |---|---|---|
+| 2026-07 | Stay in Godot, do not port to Unreal | Unreal has more raw power, but a 2-person team can't operate its complexity. Our scene (bounded static caverns + tunnels) is a Godot-friendly case: bake lighting instead of dynamic GI, fake scale with fog and light shafts. Porting = 6-12 month rewrite of working physics + netcode for no gameplay gain. See [Setting & Vertical Scale](../level-design/setting-and-scale.md) |
+| 2026-07 | Setting: an underground industrial civilization, scale as the horror | Tunnels lead to facilities/factories built tight into rock, opening onto vast man-made voids. Tight/vast rhythm drives megalophobia; surface-clean to deep-monstrous doubles as the difficulty curve. See [Setting & Vertical Scale](../level-design/setting-and-scale.md) |
 | 2026-07 | Design wiki lives at cap7n.github.io/otr-docs, seeded from existing plan docs | Shared overview for both devs; faster onboarding; records decisions |
 | 2026-07 | Tunnels confirmed as the level setting | Confinement solves the blank-page problem; route = level in a driving game; plays to existing strengths (atmosphere stack, co-op seats). See [The Tunnels](../level-design/tunnels.md) |
 | 2026-06 | Distributed authority for the drone | Pilot's machine simulates and broadcasts via NetworkTickManager, responsiveness for the operator |

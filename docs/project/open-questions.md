@@ -17,6 +17,11 @@ The answer shapes the tunnel layout, the economy stakes, and what "pressure" mea
 
 Carried loot? Everything since the hub? Nothing? Defines run tension and how much extraction matters.
 
+## Setting (see [Setting & Vertical Scale](../level-design/setting-and-scale.md))
+
+- **Who built the underground world and what happened to them?** Mining colony that dug too deep / wartime bunker-city / failed corporate arcology. Each implies different signage, machine types, and what the enemies are. Pick enough to keep props consistent, no novel required.
+- **Is the vastness beautiful or hostile?** Sublime-eerie (Subnautica) vs. grim-industrial (Metro). Both evoke megalophobia; the choice sets the lighting palette.
+
 ## Design
 
 - **Are car abilities (jump, wall-drive) unlocked from the start or bought as CAR_MODs?**
