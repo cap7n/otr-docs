@@ -47,7 +47,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 ## Chores
 
 - [ ] ⛔ **Project stretch mode:** add window/stretch canvas_items + expand to project.godot; waiting until the background code sessions land, then glance over every UI scene once
-- [ ] **Merge `audit/2026-07-cleanup` into main:** after running the game on the branch once
+- [x] 2026-07: Audit branch tested and merged into main (4 commits: junk removal, 170 orphans, menu strip)
 - [ ] **Rename schop_screen.tscn → shop_screen_panel or similar:** editor rename so references update
 - [ ] **Remove level_test_texutures from world.tscn:** editor; drags an 11 MB collision shape with it
 - [ ] **External_Carp terrain pack decision:** 49 MB, unknown licence, no references found; verify Terrain3D doesn't need it, then delete
