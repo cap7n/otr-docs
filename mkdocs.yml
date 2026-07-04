@@ -46,6 +46,7 @@ nav:
       - Shortcut Paths: systems/shortcuts.md
       - Run Modifiers: systems/modifiers.md
   - Level Design:
+      - World & Structure: level-design/world-structure.md
       - Setting & Vertical Scale: level-design/setting-and-scale.md
       - The Tunnels: level-design/tunnels.md
   - Project:

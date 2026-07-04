@@ -4,9 +4,9 @@ The world OTR takes place in, and how its spaces are used to create dread. This 
 
 ## The setting
 
-**An underground industrial civilization.** Tunnels lead to facilities and factories built into the rock, sometimes tight and cramped, sometimes opening onto vast man-made voids. You are always underground. There is no sky.
+**Superseded framing, see [World & Structure](world-structure.md) (2026-07-04).** The world is now defined as a megastructure lattice of ~2 km walled zones under a concrete sky, with tunnels and megafacility interiors as the tissue between zones. Everything below on this page, the scale-dread rules and light-based building techniques, applies unchanged to that world.
 
-The tone is industrial and dangerous, not pristine. Near the surface the tunnels are maintained, lit, and human-scaled. The deeper you go, the bigger, more abandoned, and less clearly-built-for-people the spaces become.
+The tone is industrial and dangerous, not pristine. The deeper into an expedition you push, the bigger, more abandoned, and less clearly-built-for-people the spaces become.
 
 ## Scale is the horror
 

@@ -21,8 +21,11 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] **Gate countdown UI:** logic done, TODOs in level_gate.gd and return_gate.gd are display-only
 - [ ] **Wire an objective to return_gate.unlock():** the gate already supports "locked until objective complete", nothing calls it yet; this is where the run's goal plugs in
 - [ ] **Save file:** user:// ConfigFile autoload for currency + unlocks; confirmed absent, prerequisite for junker and modifier unlocks
-- [ ] ⛔ **Junker package:** unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the stakes decision ([open question 2](open-questions.md))
-- [ ] ⛔ **Loot-dies-with-you + repair costs:** blocked on the same stakes decision
+- [ ] **Battery leash:** on-foot power timer (~30-60s), gray-screen desaturation as it fails, stumble back to the car to recharge ([World & Structure](../level-design/world-structure.md))
+- [ ] **Drone signal tether:** drone limited by signal range from the car, not battery; static/interference as it nears the edge
+- [ ] **Diegetic exit signals:** lights on zone walls (or similar in-world tells) showing which exits are open this cycle
+- [ ] ⛔ **Junker package:** unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the saving/stakes decision ([open question 1](open-questions.md))
+- [ ] ⛔ **What death costs (loot loss, repair costs):** blocked on the saving/stakes decision
 - [ ] **Flank enemy:** paces alongside the car in bursts, the honest "keeps up" enemy ([threat directions](../game/enemies.md))
 - [ ] **Run modifiers:** confirmed absent; after core loop is solid ([plan](../systems/modifiers.md))
 - [ ] **Callout/ping system:** confirmed absent; gunner marks shortcuts and threats for the driver
@@ -30,7 +33,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 
 ## Level design
 
-- [ ] **First authored route (new level):** session-style beats between start/end gates: opening encounter, complication, fork, climax (horde or set-piece, not boss), exit. round1_a is a tech demo, not the target; the route likely starts as tunnel blockout ([The Tunnels](../level-design/tunnels.md))
+- [ ] **First authored zone (new level):** the garage's neighboring zone, built session-style: opening encounter, complication, fork, climax (set-piece, not boss), exit through a wall gate. round1_a is a tech demo, not the target ([World & Structure](../level-design/world-structure.md), [The Tunnels](../level-design/tunnels.md))
 - [ ] **Cavern lighting test:** one gray-box cavern: baked LightmapGI + volumetric fog + light shafts + distant emissives; proves the megalophobia works ([Setting & Scale](../level-design/setting-and-scale.md))
 - [ ] **Tunnel kit cross-section profile:** the one profile all modular pieces share; decide before modeling any kit piece
 - [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove
@@ -55,6 +58,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 ## Parked (someday, after the game is fun)
 
 - [ ] **Rebuild menu visuals:** menu was stripped to bare buttons (2026-07) after the 52 MB embedded 3D showcase broke layout and dragged netcode into the menu. Design a proper look when the game underneath deserves it
+- [ ] **Intro sequence:** two droids wake low-battery in a garbage dump, gray screen, stumble to the garage, plug in, world blooms to color ([World & Structure](../level-design/world-structure.md)). Build after the battery leash exists (it reuses the same gray-screen system)
 
 ## Done
 

@@ -1,6 +1,6 @@
 # OTR Design Wiki
 
-**OTR is a 2-player co-op car game.** One player drives; the other operates the turret or pilots a scout drone. Together you take an armed, upgradeable car into dangerous tunnels, fight what lives down there, grab what it drops, and make it back to the hub to sell, repair, and upgrade.
+**OTR is a 2-player co-op car game.** You are two droids kept alive by the car you drive. One drives; the other operates the turret or pilots a scout drone. Together you take your armed, upgradeable car out of the garage and into the zones of a vast megastructure, fight what lives there, grab what it drops, and make it home to recharge, sell, repair, and upgrade. The world shifts between visits; the way back is never guaranteed ([World & Structure](level-design/world-structure.md)).
 
 Built in **Godot 4.7**. Co-op runs over **Steam** peer-to-peer.
 
@@ -8,7 +8,7 @@ Built in **Godot 4.7**. Co-op runs over **Steam** peer-to-peer.
 
 ## The pitch in one line
 
-*A dungeon crawl you drive through, one pair of hands on the wheel, the other on the trigger.*
+*A dungeon crawl you drive through, one pair of hands on the wheel, the other on the trigger, and the dungeon rearranges itself while you sleep.*
 
 ## The core idea
 
