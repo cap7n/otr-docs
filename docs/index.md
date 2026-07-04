@@ -2,7 +2,7 @@
 
 **OTR is a 2-player co-op car game.** One player drives; the other operates the turret or pilots a scout drone. Together you take an armed, upgradeable car into dangerous tunnels — fight what lives down there, grab what it drops, and make it back to the hub to sell, repair, and upgrade.
 
-Built in **Godot 4** with Jolt physics. Co-op runs over **Steam** peer-to-peer.
+Built in **Godot 4.7**. Co-op runs over **Steam** peer-to-peer.
 
 ---
 
