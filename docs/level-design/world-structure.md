@@ -21,7 +21,7 @@ Two droids. This is why the game is 2-player co-op, period ([decision](../projec
 The world is a **megastructure**: a lattice of zones, each roughly **2 km across**, separated by monolithic walls that rise into the sky. The sky itself is a slab of concrete or metal. There is no outside in view, no horizon, no sun. Scale is the horror ([Setting & Vertical Scale](setting-and-scale.md)).
 
 - **Zones are fully authored**, not tile-assembled. Each is hand-built and distinct; authored spaces have character.
-- **Zone themes are anachronistic — even time is not certain.** The garage sits in a 1990s American gas station. The next zone over might be a cyberpunk factory complex, or an abandoned 21st-century city. The dissonance is the world's texture, any art direction has a home, and car upgrades can span eras (junkyard parts to futuristic tech).
+- **Zone themes are anachronistic, even time is not certain.** The garage sits in a 1990s American gas station. The next zone over might be a cyberpunk factory complex, or an abandoned 21st-century city. The dissonance is the world's texture, any art direction has a home, and car upgrades can span eras (junkyard parts to futuristic tech).
 - **Between the zones**, inside and beneath the walls, run tunnels, caves, and megafacility interiors: the connective tissue. This is where the tunnel room-grammar work lives (squeezes, caverns, junctions, wall-drive sections).
 
 ## The shift
