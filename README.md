@@ -1,4 +1,4 @@
-# OTR — Design Wiki
+# OTR Design Wiki
 
 Design wiki for **OTR**, a 2-player co-op car game built in Godot 4.
 

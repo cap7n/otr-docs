@@ -4,17 +4,17 @@
 
 ## What
 
-The tunnel itself is dangerous — not just the enemies. Falling rocks, steam vents, flooded sections, fire patches, collapsing floors, swinging obstacles. Hand-placed in the level editor at specific points.
+The tunnel itself is dangerous, not just the enemies. Falling rocks, steam vents, flooded sections, fire patches, collapsing floors, swinging obstacles. Hand-placed in the level editor at specific points.
 
 ## Why
 
-Without hazards, the breather sections between encounters are just empty road. Hazards give the driver something meaningful to do when no enemies are around — and they **combine** with enemies during combat: fighting chasers while crawling through a flooded section is more interesting than either challenge alone. The tunnel feels alive instead of being a static backdrop.
+Without hazards, the breather sections between encounters are just empty road. Hazards give the driver something meaningful to do when no enemies are around, and they **combine** with enemies during combat: fighting chasers while crawling through a flooded section is more interesting than either challenge alone. The tunnel feels alive instead of being a static backdrop.
 
 ## Design principles
 
-- **Readable** — every hazard telegraphs BEFORE it hits. No unfair surprise damage.
-- **Driver-focused** — hazards test reactions and path choice. The gunner can sometimes help (shoot a stalactite early), but driving skill is the main defense.
-- **Non-lethal individually** — one hazard does moderate damage or disrupts movement. Danger comes from combinations.
+- **Readable**, every hazard telegraphs BEFORE it hits. No unfair surprise damage.
+- **Driver-focused**, hazards test reactions and path choice. The gunner can sometimes help (shoot a stalactite early), but driving skill is the main defense.
+- **Non-lethal individually**, one hazard does moderate damage or disrupts movement. Danger comes from combinations.
 
 ---
 
@@ -22,12 +22,12 @@ Without hazards, the breather sections between encounters are just empty road. H
 
 | Hazard | Challenge type | Tell |
 |---|---|---|
-| **Falling rocks** | Speed rewards — outrun the drop. Gunner can pre-trigger stalactites. | Falling dust, pebbles ~0.5s early, cracking sound |
-| **Steam vents** | Pattern reading — 2s on / 3s off cycle; push force + light damage | Hiss + glow 1s before blast |
-| **Flooded section** | Momentum — drag and traction loss; deep water stalls the engine. Rewards commitment, punishes hesitation | Visible water, shallow → deep |
-| **Fire patches** | Path choice — fires don't cover the full width; pick a line. Tick damage | Fire + orange wall glow, crackling |
-| **Collapsing floor** | Speed check — fast clears the gap, slow falls in. "Hit nitro NOW" moments | Floor cracks, cracking audio, crumbles edge-in |
-| **Swinging obstacles** | Timing — pendulums across the tunnel; blast through between swings or wait | Always visible + creaking metal |
+| **Falling rocks** | Speed rewards, outrun the drop. Gunner can pre-trigger stalactites. | Falling dust, pebbles ~0.5s early, cracking sound |
+| **Steam vents** | Pattern reading, 2s on / 3s off cycle; push force + light damage | Hiss + glow 1s before blast |
+| **Flooded section** | Momentum, drag and traction loss; deep water stalls the engine. Rewards commitment, punishes hesitation | Visible water, shallow → deep |
+| **Fire patches** | Path choice, fires don't cover the full width; pick a line. Tick damage | Fire + orange wall glow, crackling |
+| **Collapsing floor** | Speed check, fast clears the gap, slow falls in. "Hit nitro NOW" moments | Floor cracks, cracking audio, crumbles edge-in |
+| **Swinging obstacles** | Timing, pendulums across the tunnel; blast through between swings or wait | Always visible + creaking metal |
 
 ## Placement philosophy
 
@@ -37,7 +37,7 @@ Without hazards, the breather sections between encounters are just empty road. H
 
 ## Build order
 
-1. Steam vent — simplest (timer cycle, push, tick damage)
+1. Steam vent, simplest (timer cycle, push, tick damage)
 2. Fire patch
 3. Falling rocks
 4. Flooded zone (drag/friction modifiers)

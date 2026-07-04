@@ -1,16 +1,16 @@
 # Decision Log
 
-Decisions that shape the game, newest first. When something gets decided in a design conversation, it gets a line here — with the *why*, so future-us doesn't relitigate it.
+Decisions that shape the game, newest first. When something gets decided in a design conversation, it gets a line here, with the *why*, so future-us doesn't relitigate it.
 
 | Date | Decision | Why |
 |---|---|---|
 | 2026-07 | Design wiki lives at cap7n.github.io/otr-docs, seeded from existing plan docs | Shared overview for both devs; faster onboarding; records decisions |
 | 2026-07 | Tunnels confirmed as the level setting | Confinement solves the blank-page problem; route = level in a driving game; plays to existing strengths (atmosphere stack, co-op seats). See [The Tunnels](../level-design/tunnels.md) |
-| 2026-06 | Distributed authority for the drone | Pilot's machine simulates and broadcasts via NetworkTickManager — responsiveness for the operator |
+| 2026-06 | Distributed authority for the drone | Pilot's machine simulates and broadcasts via NetworkTickManager, responsiveness for the operator |
 | 2026-04 | Networking overhaul: single NetworkTickManager, StateBuffer + Hermite interpolation, no per-script sync RPCs | Bandwidth control, consistent interpolation, one sync path to debug |
 | 2026-04 | Wall-driving via gravity shift, not sticky wheels | Jolt wheels only push along local down; redirecting gravity makes them work unmodified |
-| — | Jolt physics instead of Godot default | Better vehicle behavior |
-| — | Hand-placed enemy spawns, no procedural waves | Pacing is authored, like encounter design in a session |
-| — | Hazards must be readable, driver-focused, non-lethal individually | No unfair surprise damage; danger comes from combinations |
+| - | Jolt physics instead of Godot default | Better vehicle behavior |
+| - | Hand-placed enemy spawns, no procedural waves | Pacing is authored, like encounter design in a session |
+| - | Hazards must be readable, driver-focused, non-lethal individually | No unfair surprise damage; danger comes from combinations |
 
-*(Older decisions reconstructed from project docs — add corrections if the why is off.)*
+*(Older decisions reconstructed from project docs, add corrections if the why is off.)*

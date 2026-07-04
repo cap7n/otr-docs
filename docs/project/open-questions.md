@@ -22,10 +22,10 @@ Carried loot? Everything since the hub? Nothing? Defines run tension and how muc
 - **Are car abilities (jump, wall-drive) unlocked from the start or bought as CAR_MODs?**
 - **Is cargo space limited?** If yes, "what do we keep" becomes a co-op negotiation.
 - **Jump input:** Space conflicts with handbrake. Tap/hold split, or separate key (Q)?
-- **`R` key conflict:** wall-drive vs. fire rocket — one has to move.
+- **`R` key conflict:** wall-drive vs. fire rocket, one has to move.
 - **Art style:** post-processing is in place, but the overall art direction is undecided. Discuss before implementing.
 
 ## Technical (needs testing, not discussion)
 
 - Jolt per-body gravity direction support (wall-drive prerequisite)
-- Square shadows in the tunnel — mesh normals fix, else shadow atlas size / light softness
+- Square shadows in the tunnel, mesh normals fix, else shadow atlas size / light softness

@@ -4,7 +4,7 @@ The full verb list, per seat. This is the toolbox every level beat gets designed
 
 ## Seats
 
-Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot). Players switch seats freely — `E` to enter driver/passenger, `1` for the drone, `2` for the gun.
+Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot). Players switch seats freely, `E` to enter driver/passenger, `1` for the drone, `2` for the gun.
 
 ## Driver
 
@@ -24,7 +24,7 @@ Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot)
 |---|---|---|
 | Aim turret | Mouse | Yaw ±90°, pitch ±30° |
 | Fire rockets | Fire button | |
-| Scan surroundings | — | Elevated view; spots shortcut cues the driver can't see |
+| Scan surroundings | - | Elevated view; spots shortcut cues the driver can't see |
 
 ## Drone pilot
 
@@ -33,8 +33,8 @@ Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot)
 | Fly | WASD + mouse | Full 3D flight |
 | Ascend / descend | Space / Ctrl | |
 | Rotate | Q / E | |
-| Lock-on targeting | — | Target reticle |
-| Scout | — | Fits where the car can't; finds hidden rooms |
+| Lock-on targeting | - | Target reticle |
+| Scout | - | Fits where the car can't; finds hidden rooms |
 
 The drone has limited lives per run.
 
@@ -54,7 +54,7 @@ The drone has limited lives per run.
 - Stasis cargo: stash loot in the trailer's cargo box
 
 !!! tip "Design lens"
-    A beat that only uses **driver** verbs is single-player content. The good stuff uses at least one verb from each column at the same time — driver threads a hazard *while* the gunner shoots open a shortcut wall *while* deciding whether to stop for the loot room the drone just found.
+    A beat that only uses **driver** verbs is single-player content. The good stuff uses at least one verb from each column at the same time, driver threads a hazard *while* the gunner shoots open a shortcut wall *while* deciding whether to stop for the loot room the drone just found.
 
 !!! note "Input overlaps (intentional, context-sensitive)"
     Space = jump + handbrake · S = walk back + brake · E = interact + drone rotate · Ctrl = crouch + drone down · R = wall-drive + fire rocket (conflict, unresolved). Check existing bindings before adding new ones.

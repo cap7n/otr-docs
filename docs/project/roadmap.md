@@ -1,6 +1,6 @@
 # Roadmap
 
-Rough sequencing. The project runs issue-driven — solve one system, ship it, move on — but this is the intended order of battle.
+Rough sequencing. The project runs issue-driven, solve one system, ship it, move on, but this is the intended order of battle.
 
 ## Done
 
@@ -15,16 +15,16 @@ Rough sequencing. The project runs issue-driven — solve one system, ship it, m
 - Post-processing stack (fog, SSAO, SDFGI, glow, custom shader)
 - Tunnel level `round1_a` (geometry + spawns)
 
-## Now — make one run fun
+## Now, make one run fun
 
-1. **Decide the run ending** ([open question #1](open-questions.md)) — blocks everything below
+1. **Decide the run ending** ([open question #1](open-questions.md)), blocks everything below
 2. Fix tunnel shadows; first lighting/atmosphere pass
 3. Author one 10-minute route beat-by-beat ([The Tunnels](../level-design/tunnels.md))
-4. Nitro boost (first car ability — simplest, enables speed-gated design)
+4. Nitro boost (first car ability, simplest, enables speed-gated design)
 5. First hazards: steam vent, fire patch ([hazards](../systems/hazards.md))
 6. First shortcut: destructible wall + side path ([shortcuts](../systems/shortcuts.md))
 
-## Next — depth
+## Next, depth
 
 - Car jump; wall-drive prototype (Jolt gravity test first)
 - Remaining hazards; collapsing floor set-pieces
@@ -32,7 +32,7 @@ Rough sequencing. The project runs issue-driven — solve one system, ship it, m
 - Boss integration into the route climax
 - Callout/ping system for co-op communication
 
-## Later — replayability & polish
+## Later, replayability & polish
 
 - [Run modifiers](../systems/modifiers.md) + voting terminal
 - Car cosmetics; wear & tear shader
