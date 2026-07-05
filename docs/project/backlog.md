@@ -59,6 +59,13 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] **lobby.gd is binary to git:** 72 trailing null bytes (torn-write artifact) make git classify it as binary — no readable diffs for lobby.gd ever. Strip the padding (byte-truncate, zero logic change), commit, diffs come back. Drone audit 2026-07-05 verdict otherwise: distributed authority implemented properly (velocity-inheriting handoff, transfer-race guard, disconnect reverts to host); only chore is the vestigial gimbal_yaw sync field + dead Edge Yaw export group in drone2.gd
 - [ ] **Fix `:=` typing violations:** mostly road_generator.gd (33) and terrain_conform.gd (15)
 
+## Godot 4.7 aftercare (migration succeeded 2026-07-05 — log clean, extensions loaded, full session ran)
+
+- [ ] **Re-save car.tscn:** 4.7 reimport of Car.blend triggers a scene "recovery process" on every load; also check the orphaned `Car mesh/Vent` override ("modified from inside an instance, but it has vanished")
+- [ ] **NTM burst overflows MTU (1524 > 1392 bytes unreliable):** all entities go dirty on the same tick (level spawn; the keepalive repeats the burst each second) and the 80-byte-per-entity estimate undershoots. Stagger keepalive phase per entity (hash of path) + raise estimate to ~110
+- [ ] **kneel_idle animation not found:** crouch falls back to pistol_idle. Check the Ybot AnimationPlayer list — the 4.7 reimport may have renamed it; else it never existed and crouch was never animated
+- [ ] **`reset_physics_interpolation()` deprecated in 4.7:** works but warns; look up the blessed replacement in the 4.7 docs, then mechanical rename across player/drone/turret/rocket/car call sites
+
 ## Chores
 
 - [ ] ⛔ **Project stretch mode:** add window/stretch canvas_items + expand to project.godot; waiting until the background code sessions land, then glance over every UI scene once
