@@ -27,6 +27,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] ⛔ **Junker package:** unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the saving/stakes decision ([open question 1](open-questions.md))
 - [ ] ⛔ **What death costs (loot loss, repair costs):** blocked on the saving/stakes decision
 - [ ] **Flank enemy:** paces alongside the car in bursts, the honest "keeps up" enemy ([threat directions](../game/enemies.md))
+- [ ] **Terrain-impact deflection (car feel):** hitting a banked slope should bump the car and push it to turn away; today the stability assists eat the natural Jolt deflection (yaw-damp kills the "unwanted" yaw, slide-align pulls the nose back, anti-roll flattens the body kick) so the car plows on-rails. Fix direction: reuse the existing `recoil_pulse()` relief pattern — when `vertical_jolt` (already computed for camera shake) or a lateral load spike crosses a threshold, open a short relief window on yaw-damp + slide-align + anti-roll so the physics deflection reads through, then fade assists back. No fake forces; only add an explicit contact-normal torque if relief alone is too subtle. Proposed 2026-07-05
 - [ ] **Run modifiers:** confirmed absent; after core loop is solid ([plan](../systems/modifiers.md))
 - [ ] **Callout/ping system:** confirmed absent; gunner marks shortcuts and threats for the driver
 - [ ] **Boss rework:** benched; doesn't feel good yet, needs love before any route depends on it
