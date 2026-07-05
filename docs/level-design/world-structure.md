@@ -24,6 +24,8 @@ The world is a **megastructure**: a lattice of zones, each roughly **2 km across
 - **Zone themes are anachronistic, even time is not certain.** The garage sits in a 1990s American gas station. The next zone over might be a cyberpunk factory complex, or an abandoned 21st-century city. The dissonance is the world's texture, any art direction has a home, and car upgrades can span eras (junkyard parts to futuristic tech).
 - **Between the zones**, inside and beneath the walls, run tunnels, caves, and megafacility interiors: the connective tissue. This is where the tunnel room-grammar work lives (squeezes, caverns, junctions, wall-drive sections).
 
+**The shell and the cut-out (2026-07-05).** Every zone is the same reusable **shell**: a bare 2 km concrete cube (built once, `hub_v2.tscn` is the first). A zone's content is a **cut-out**: when the structure captures a 2×2 km slice of somewhere, it takes ~1 km of ground with it, so the terrain surface sits roughly **mid-cube**, ceiling 1 km above the surface, shell continuing 1 km below it. Consequences: every room has an underworld beneath its terrain slab (collapses, basements, drainage go there), and the shell's wall shader takes a per-room `ground_y` so grime and weathering anchor to wherever that room's ground line is.
+
 ## The shift
 
 The lattice **shifts every so often, never in real time under the player**. An exit that was open last visit may be sealed now; the zone behind a wall may be a different zone than before. In fiction the structure rearranges itself; in the engine, the shift is simply which level loads behind which gate, plus which exits are flagged open, near-zero tech for near-infinite variety.
