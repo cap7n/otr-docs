@@ -44,7 +44,8 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] 🔨 **RPC sender validation on 4 input handlers:** running as background task; seat-shared controls (handbrake!) must keep working
 - [ ] 🔨 **Globals.DEBUG flag + gate 50+ prints:** running as background task
 - [ ] **Cache enemy target scans:** 5 enemy scripts call get_nodes_in_group every physics frame; horde_manager already shows the right pattern
-- [ ] **Split car.gd (1233 lines) and player.gd (1072):** when next doing major work in them, not before
+- [ ] **Centralize the RPC broadcast pattern:** the `call locally, then rpc_id to every world-ready peer` loop is copy-pasted ~10× across car.gd, door_controller.gd, seat_controller.gd, and most ability controllers. One shared `broadcast(method, args)` helper (autoload or a controller base class) would collapse them all and shrink every controller at once. **Handle with care:** RPC has bitten before — do it in its own session, one call site at a time, host+client test after each. Deliberately skipped during the 2026-07-05 car.gd split to keep that refactor RPC-neutral
+- [ ] 🔨 **Split car.gd and player.gd (1072):** car.gd half done 2026-07-05 (1233 → 912; doors/cargo, seats/interact, audio, drone dock extracted to controller nodes — all 17 @rpc functions kept on the Car node so RPC paths are unchanged), pending multiplayer test. player.gd still to do when next doing major work in it, not before
 - [ ] **Fix `:=` typing violations:** mostly road_generator.gd (33) and terrain_conform.gd (15)
 
 ## Chores
