@@ -58,6 +58,7 @@ Everything is Inspector-tunable, no code:
 
 ## Open items
 
+- [ ] Downshift transitions sound rough (noted 2026-07-05, parked for now — likely needs per-shift RPM drop shaping or crossfade tuning)
 - [ ] Wire `set_interior()` to seat/camera state (bus effects exist, nothing calls it)
 - [ ] Recording take 2 — redo `idle` (source crackle; current one is de-clicked but not perfect) and verify the top-band clips actually reached 6500
 - [ ] Tune drive-mode shift maps by ear
