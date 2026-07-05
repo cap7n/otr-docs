@@ -42,6 +42,7 @@ nav:
       - Economy & Loot: game/economy.md
   - Systems (Plans):
       - Car Abilities: systems/car-abilities.md
+      - Sound & Engine Audio: systems/audio.md
       - Environmental Hazards: systems/hazards.md
       - Shortcut Paths: systems/shortcuts.md
       - Run Modifiers: systems/modifiers.md
