@@ -23,8 +23,8 @@ Two loop stacks (**on-throttle** / **off-throttle**, one loop per RPM band) play
 RPM itself is **virtual** (`car_audio_controller.gd`) — the car physics has no engine sim, on purpose:
 
 - Virtual automatic gearbox: 5 gears including a tall overdrive; speed maps to RPM through the current gear.
-- Shift points follow **aggression**, a slow-attack throttle envelope: keyboard W is binary, so *how long* you hold it stands in for *how far you press* a trigger. Nitro = instant max aggression.
-- Kickdown, shift-down on decel, rev-limiter fuel-cut bounce at redline.
+- Each drive mode has a **fixed shift point** — the mode is the player's stated intent, the game never infers "how serious" a W press is (decided 2026-07-05: an earlier throttle-inference envelope felt weird on keyboard and was removed).
+- Shift-down on decel, rev-limiter fuel-cut bounce at redline.
 
 ### Drive modes & controls
 
@@ -34,9 +34,13 @@ RPM itself is **virtual** (`car_audio_controller.gd`) — the car physics has no
 | **G** | Neutral ⇄ Drive — in N, W free-revs with no drive power |
 | **M** | Cycle drive mode **D → S → T** (shown as the HUD gear letter) |
 
-- **D (comfort):** short-shifts ~2600, cruises ~3900 RPM at 110 km/h, needs a long W hold to get loud.
-- **S (sport):** holds gears to ~3800+, eager kickdown.
-- **T (track):** overdrive locked out, shifts at redline, any throttle = attack.
+Drive modes shape **real physics** (throttle response + top speed in car.gd), not just sound. Pick the tool for the situation:
+
+| Mode | For | Shifts at | Throttle pedal | Top speed |
+|------|-----|-----------|----------------|-----------|
+| **D** | puzzles, climbing, precision | ~2800 | soft ramp-in (~0.7 s) | 70% |
+| **S** | tight streets, quick + civil | ~4800 | quick | 90% |
+| **T** | open stretch, flat out | ~6400, no overdrive | instant | 100% |
 
 ### Networking
 
@@ -46,7 +50,8 @@ Driver input → server-authoritative state → synced to all peers via tick fie
 
 Everything is Inspector-tunable, no code:
 
-- **Car → audio controller node:** gear ratios (`gear_top_speeds_kmh`), per-mode shift maps (*Drive Mode D/S/T* groups), aggression attack/release, limiter bounce feel (*Rev Limiter* group).
+- **Car (car.gd):** per-mode throttle response + speed scale (*Drive Modes* group).
+- **Car → audio controller node:** gear ratios (`gear_top_speeds_kmh`), per-mode shift points (*Drive Mode Shift Points* group), limiter bounce feel (*Rev Limiter* group).
 - **Car → EngineSoundBlender node:** stack/gain fade speeds, idle fade, pitch clamps, `limiter_rpm`.
 - **`show_debug` on EngineSoundBlender:** live overlay — RPM, throttle, run state, every audible loop with gain and pitch. Works via Remote tree while the game runs.
 - **`record_game.ps1`** (COWORK tools): captures game audio through the Wave Link chain and auto-runs the click detector — for pinpointing pops/chirps by timestamp.
