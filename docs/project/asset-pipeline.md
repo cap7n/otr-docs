@@ -5,12 +5,12 @@ How OTR assets get their look, established 2026-07-06 with the first two shipped
 ## The loop
 
 1. **Model** in Blender. Separate parts by material. Quick Smart UV Project per material (islands of *different* materials may overlap — each material bakes to its own texture; islands *within* one material may not).
-2. **Procedural materials** get scripted as Blender node graphs (Claude writes/tunes them; all look values live in one `TUNE` dict per script).
-3. **Lookdev together**: open the asset's blend, `Z → Rendered`, give notes in plain words ("less rust", "drips longer"). Iterate until it reads right.
+2. **Procedural materials** are scripted as Blender node graphs (`bpy`); all look values live in one `TUNE` dict per script, so a note like "less rust, longer drips" is a two-number change.
+3. **Lookdev**: open the asset's blend, `Z → Rendered`, judge, tune, repeat until it reads right.
 4. **Bake** to PBR maps (albedo / roughness / normal, metallic when it varies). Per-object for hero props, seamless tiles for big surfaces.
 5. **Godot**: textures land in `textures/<Asset>/`, materials as `.tres`. For `.blend` props, materials are remapped **by material name** in the `.blend.import` — never by node-path overrides in scenes (those broke twice; names survive re-imports).
 
-The authoring workspace (scripts, lookdev blends, baked masters, preview renders) lives outside the game repo in `Desktop/OTR Assets`, with its own CLAUDE.md holding the technical detail.
+The authoring workspace (scripts, lookdev blends, baked masters, preview renders) lives outside the game repo in `Desktop/OTR Assets`, with its own notes file holding the technical detail.
 
 ## The giant-surface rule (why the 2 km artifact happened)
 
