@@ -35,6 +35,8 @@ The world is a **megastructure**: a lattice of zones, each roughly **2 km across
 
 The lattice **shifts every so often, never in real time under the player**. An exit that was open last visit may be sealed now; the zone behind a wall may be a different zone than before. In fiction the structure rearranges itself; in the engine, the shift is simply which level loads behind which gate, plus which exits are flagged open, near-zero tech for near-infinite variety.
 
+**Every cube has exactly four gates, one per wall** (decided 2026-07-06). They are shell infrastructure — the structure stamps identical gate assemblies into every cube regardless of what got sampled inside. Open/closed is per-cycle state, so the shift system toggles sockets that always exist. Around each gate, the *roads* tell its history: a worn or bulldozed connector means it's been open before; a gate standing in raw terrain with no path has never been seen open. Inhabitants can also interfere (barricade a gate they don't want used).
+
 **Exits are read diegetically**: lights on the walls or similar in-world signals tell you what is open this cycle. No menu, no minimap. Some exits may need to be *opened* rather than found (the locked-gate weak-point and objective-unlock machinery already exists in code).
 
 ## The loop
