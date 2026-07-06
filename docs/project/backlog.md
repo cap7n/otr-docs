@@ -68,6 +68,9 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 
 ## Chores
 
+- [ ] **Finish the hub_v2 shell material swap:** point floor and ceiling at their mega_concrete_v2 .tres (wall done 2026-07-06); clear the leftover v1-shader `next_pass` on the wall material if still present
+- [ ] **Delete old pipe assets** once the pipe_outfall instance in hub_v2 is replaced by mega_pipe_v2: `pipe_outfall.tscn`, `BigPipeWithWater.blend` (+.import), `pipe_outer/pipe_inside.tres`, `textures/PipeOutfall/` (pre-texture backup lives in Desktop/OTR/Backups)
+- [ ] **Retire mega_concrete.gdshader (v1)** when no surface references it — the comparison reference wall still uses it today
 - [ ] ⛔ **Project stretch mode:** add window/stretch canvas_items + expand to project.godot; waiting until the background code sessions land, then glance over every UI scene once
 - [ ] **Rename schop_screen.tscn → shop_screen_panel or similar:** editor rename so references update
 - [ ] **Remove level_test_texutures from world.tscn:** editor; drags an 11 MB collision shape with it
@@ -82,6 +85,8 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 ## Done
 
 *(Move checked items here with a date, it feels good and it's useful history.)*
+
+- [x] 2026-07-06: **Blender→Godot asset pipeline built and proven** (`Desktop/OTR Assets`: procedural material scripts, lookdev blends with preview renders, tileable + per-object bakers). Two assets shipped same day: **MegaPipeV2** (weathered metal + rust, flowing-water shader untouched, materials remapped by name in .import) and **shell concrete v2** (baked tile + slim hybrid shader: per-panel tint/mirror-flip, macro patches, floor grime, close-up detail bump). Killed the 2 km shimmering-lines wall artifact (procedural math can't be mip-filtered) and the inverted wall lighting (RGTC-compressed normal maps drop the blue channel — shader now reconstructs it)
 
 - [x] 2026-07-05: **"Phantom .blend rewrites" investigated → no phantom.** Every blend change was the partner's genuine Blender work (autosmooth etc.) arriving via pull; the "I pushed a file I didn't touch" impression was GitHub Desktop showing pulled commits + pull-merge commits alongside your own push. Lesson: check the AUTHOR column before assuming a commit is yours — `git log --format="%h %an %s"` settles it in seconds
 
