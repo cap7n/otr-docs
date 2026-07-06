@@ -16,13 +16,18 @@ Two droids. This is why the game is 2-player co-op, period ([decision](../projec
 
 **The drone** is not battery-limited but **signal-limited**: it can fly only within signal strength of the car. Range, not time.
 
+**The car** is the real protagonist and a walking contradiction, like the world: a 70s–90s American muscle body, a Cobra-style V8, and anachronistic tech bolted on (railgun on the roof). Different eras and places colliding in one machine — the world's premise on four wheels.
+
 ## The structure
 
 The world is a **megastructure**: a lattice of zones, each roughly **2 km across**, separated by monolithic walls that rise into the sky. The sky itself is a slab of concrete or metal. There is no outside in view, no horizon, no sun. Scale is the horror ([Setting & Vertical Scale](setting-and-scale.md)).
 
 - **Zones are fully authored**, not tile-assembled. Each is hand-built and distinct; authored spaces have character.
-- **Zone themes are anachronistic, even time is not certain.** The garage sits in a 1990s American gas station. The next zone over might be a cyberpunk factory complex, or an abandoned 21st-century city. The dissonance is the world's texture, any art direction has a home, and car upgrades can span eras (junkyard parts to futuristic tech).
+- **Zone themes are anachronistic, even time is not certain.** Each cube is a **sample**: a 2×2 km slice of a different time period, region, or civilization, extracted whole — think *Cube*, scaled way up. The garage sits in a 1990s American gas station. The next zone over might be a cyberpunk factory complex, or an abandoned 21st-century city. The dissonance is the world's texture, any art direction has a home, and car upgrades can span eras (junkyard parts to futuristic tech).
+- **Why it was built is unknown in-world.** Theories the inhabitants left behind: a sampling project, a conservation effort, a sick museum. Even the smartest survivors never knew. The megastructure connecting the cubes used to *function* — some automated systems still tick along with nobody left to maintain them.
 - **Between the zones**, inside and beneath the walls, run tunnels, caves, and megafacility interiors: the connective tissue. This is where the tunnel room-grammar work lives (squeezes, caverns, junctions, wall-drive sections).
+
+**Extraction scars (environmental storytelling).** The sampling was violent and literal: skyscrapers cut clean at the roofline because the rest didn't fit; gas stations with skeletons and an empty pump; garages full of wrecks. Some cubes show infrastructure that *kept working after extraction* — plumbing fed from the megastructure that ran for years before failing — meaning some populations had real hope and stability before the collapse, rather than being doomed from day one. Players piece together what happened without ever getting a clean answer for why. Every zone should carry at least one scar that tells its version of this story.
 
 **The shell and the cut-out (2026-07-05).** Every zone is the same reusable **shell**: a bare 2 km concrete cube (built once, `hub_v2.tscn` is the first). A zone's content is a **cut-out**: when the structure captures a 2×2 km slice of somewhere, it takes ~1 km of ground with it, so the terrain surface sits roughly **mid-cube**, ceiling 1 km above the surface, shell continuing 1 km below it. Consequences: every room has an underworld beneath its terrain slab (collapses, basements, drainage go there), and the shell's wall shader takes a per-room `ground_y` so grime and weathering anchor to wherever that room's ground line is.
 
@@ -37,6 +42,10 @@ The lattice **shifts every so often, never in real time under the player**. An e
 The garage is **home**: the return point, the shop, the save anchor (saving model still [undecided](../project/open-questions.md)). A run leaves the garage into a neighboring zone, explores it by car, and exits through one of its sides.
 
 **Expeditions chain zones.** You can push through a zone's far side into the next zone instead of returning, going deeper on one outing. The way home may have shifted while you were out. The deeper you push, the more you are carrying and the less certain the return, so "push on or head back?" is the standing argument between the two seats.
+
+**Fuel is the survival gauge.** Range = fuel, and scavenging is literally how long you get to keep driving — loot isn't just reward, it's runway. Current direction (the saving/stakes model itself is still [undecided](../project/open-questions.md)): roguelite-shaped — make it back and keep the haul, or die and keep a fraction for meta-progression.
+
+**Tunnels are the loading screen.** Traversing a between-zone tunnel takes ~5–10 minutes of real driving, and behind the curtain that drive does everything: the old zone unloads, the world re-centres on the player (keeps physics precision sane at these distances), the next zone streams in. No visible loading, ever — just a long, tense drive through the structure's guts.
 
 ## The enemies
 
