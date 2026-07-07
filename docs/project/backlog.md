@@ -32,6 +32,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] **Run modifiers:** confirmed absent; after core loop is solid ([plan](../systems/modifiers.md))
 - [ ] **Callout/ping system:** confirmed absent; gunner marks shortcuts and threats for the driver
 - [ ] **Boss rework:** benched; doesn't feel good yet, needs love before any route depends on it
+- [ ] **First landmark enemy (method-to-kill):** a one-of-a-kind, zone-specific encounter beaten by a *method*, not a health bar — e.g. harpoon-trip a tall quadruped then hit the exposed head, or lure it into a hazard ([Landmark Enemies & Bosses](../game/landmark-enemies.md)). Rides with the first authored zone
 
 ## Level design
 
