@@ -44,7 +44,7 @@ Not a world, a session. This is the arc of an **authored zone** (and it shapes l
 4. **Climax**, set-piece: boss, horde in a cavern, collapsing-floor escape
 5. **Exit**, depends on the [win-condition decision](../project/open-questions.md)
 
-**The two-seat test for every beat:** what is the driver doing, and what is the co-driver doing? If the answer to either is "nothing," the beat needs work.
+**The two-seat test for every beat:** what is the driver doing, and what is the co-driver doing? If the answer to either is "nothing," the beat needs work. (The full test lives in [Co-op Design Principles](../co-op-design.md).)
 
 ## Atmosphere
 

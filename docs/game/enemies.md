@@ -40,7 +40,7 @@ Blocks progress until its **weak point** is shot out. Multi-phase destruction.
 - If the car never enters a spawn zone (e.g. took a shortcut around it), those enemies never spawn.
 
 !!! tip "Design lens"
-    Each enemy asks a different question of the two seats. Melee orbs: *ram or shoot?* Flying enemies: *only the gunner can reach them.* Ranged enemies: *close the distance (driver) or outshoot them (gunner)?* Gates: *gunner must hit the weak point while the driver holds position under fire.* Encounters get interesting when types are mixed so both seats are busy.
+    Each enemy asks a different question of the two seats. Melee orbs: *ram or shoot?* Flying enemies: *only the gunner can reach them.* Ranged enemies: *close the distance (driver) or outshoot them (gunner)?* Gates: *gunner must hit the weak point while the driver holds position under fire.* Encounters get interesting when types are mixed so both seats are busy. See [Co-op Design Principles](../co-op-design.md).
 
 ## Threat directions (design principles, 2026-07)
 

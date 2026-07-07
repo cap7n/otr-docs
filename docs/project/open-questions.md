@@ -26,6 +26,7 @@ Start with a weak car; abilities and power are bought as CAR_MOD items. Rule: un
 - **Is cargo space limited?** If yes, "what do we keep" becomes a co-op negotiation.
 - **Where does fuel come from?** Range = fuel is decided ([World & Structure](../level-design/world-structure.md)), but the [economy](../game/economy.md) never sources it: do you buy fuel, scavenge it, or is it just a run timer? And does running dry strand you mid-zone or end the run? ([The Car](../game/the-car.md) flags this too.)
 - **Car damage & repair model:** the car has HP, takes damage, and is repaired in the hub, and the wear shader is built to show it — but the actual numbers (how much HP, how repair is priced, what a beaten car costs) aren't specified anywhere, and they're tangled with what death costs.
+- **In-game comms vs. coordination-by-action:** we don't assume voice chat, so co-op is meant to read through coupled actions and diegetic tells ([Co-op Design Principles](../co-op-design.md)). Open: does the game still ship explicit tools (the [callout/ping system](backlog.md), a shared marker) as a safety net, or lean fully on action + world-reading?
 - **`R` key conflict:** wall-drive toggle vs. rocket pot fire, both on R, one has to move before wall-drive is re-enabled. *(Jump input resolved: it shipped on Q.)*
 
 ## Technical (needs testing, not discussion)

@@ -35,6 +35,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Co-op Design Principles: co-op-design.md
   - The Game:
       - Game Loop: game/loop.md
       - The Car: game/the-car.md
