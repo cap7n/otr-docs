@@ -35,14 +35,20 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Co-op Design Principles: co-op-design.md
   - The Game:
       - Game Loop: game/loop.md
+      - The Car: game/the-car.md
       - What Players Can Do: game/player-verbs.md
-      - Enemies & Obstacles: game/enemies.md
+      - Weapons & Combat: game/weapons-combat.md
+      - Enemies:
+          - Roster & Obstacles: game/enemies.md
+          - Landmarks & Bosses: game/landmark-enemies.md
       - Economy & Loot: game/economy.md
   - Systems (Plans):
       - Car Abilities: systems/car-abilities.md
       - Sound & Engine Audio: systems/audio.md
+      - Music & Soundtrack: systems/soundtrack.md
       - Environmental Hazards: systems/hazards.md
       - Shortcut Paths: systems/shortcuts.md
       - Run Modifiers: systems/modifiers.md

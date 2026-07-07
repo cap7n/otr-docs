@@ -40,7 +40,7 @@ Every encounter, hazard, and secret is designed to ask two questions at once: *w
 
 ## How to use this wiki
 
-Start with the [Game Loop](game/loop.md) to understand the run structure, then [What Players Can Do](game/player-verbs.md) for the full verb list. The **Systems** section holds the design plans for upcoming features. [The Tunnels](level-design/tunnels.md) is the active level-design work.
+[Co-op Design Principles](co-op-design.md) is the lens everything else is designed through — start there, then the [Game Loop](game/loop.md) for the run structure and [What Players Can Do](game/player-verbs.md) for the full verb list. The **Systems** section holds the design plans for upcoming features. [The Tunnels](level-design/tunnels.md) is the active level-design work.
 
 !!! note "The one rule of this wiki"
     **This wiki records decisions, it doesn't replace making them.** If you catch yourself writing pages about things that haven't been decided, stop and put it in [Open Questions](project/open-questions.md) instead.
