@@ -37,6 +37,7 @@ nav:
   - Home: index.md
   - The Game:
       - Game Loop: game/loop.md
+      - The Car: game/the-car.md
       - What Players Can Do: game/player-verbs.md
       - Enemies & Obstacles: game/enemies.md
       - Economy & Loot: game/economy.md

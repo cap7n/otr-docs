@@ -2,6 +2,15 @@
 
 *The active level-design work. No tunnel level exists yet: `round1_a.tscn` is an outdoor tech demo/testbed (it proved gates, hordes, and terrain), and the old `tunnel_level.tscn` prototype was removed in the July 2026 cleanup (recoverable from git history). The real level starts with the kit profile and blockout.*
 
+## Where tunnels fit (the megastructure model)
+
+Since the [World & Structure](world-structure.md) decision, "the level" is **two layers**, and this page is about the second:
+
+- **Zones** are the authored *destinations* — ~2 km hand-built spaces you drive into, fight and loot through, and exit through one of four wall gates. The full session arc (opening → complication → fork → climax → exit) is authored *here*; the [first authored zone](../project/backlog.md) is the current headline level-design task.
+- **Tunnels** are the *connective tissue* between zones — squeezes, caverns, junctions, wall-drive sections — and double as the diegetic loading screen: a tense 5–10 minute drive during which the old zone unloads and the next streams in, with no loading screen ever shown.
+
+The room grammar below is the shared vocabulary for both, but tunnels own confinement, spectacle (wall-drive), and the between-zone breather, while zones own the encounter-heavy set-pieces. Everything under "Why tunnels" is why confinement is the right *default* shape for OTR's level design.
+
 ## Why tunnels
 
 The setting is a design decision, not just a vibe:
@@ -27,7 +36,7 @@ The failure mode of tunnels is monotony. The fix is varying the space itself, ea
 
 ## Design a route like a session
 
-Not a world, a session. Each run route gets:
+Not a world, a session. This is the arc of an **authored zone** (and it shapes longer tunnel stretches too). Each run route gets:
 
 1. **Opening beat**, establish mood, easy first encounter
 2. **Complication mid-route**, hazard + enemy combination, or a fork
@@ -53,4 +62,4 @@ The target feel: headlights cutting through fog in the dark. Assets on hand: tun
 - [ ] Shortcuts / forks placed
 - [ ] Wall-drive sections
 - [ ] Lighting & atmosphere pass
-- [ ] First fully-authored 10-minute route, beat by beat
+- [ ] First fully-authored zone route (~10 minutes), beat by beat

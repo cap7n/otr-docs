@@ -24,6 +24,8 @@ Start with a weak car; abilities and power are bought as CAR_MOD items. Rule: un
 - **Long-term direction:** expeditions go out and come home, but where does it all *go*? Escape the structure? Reach an edge? Ever-deeper mastery with no promised outside? Undefined for now, and fine to leave until the core loop grips.
 - **Is the vastness beautiful or hostile?** The gray-to-color intro suggests the answer trends vivid-when-powered; the palette question is now really "how vivid, and does it vary per zone theme?"
 - **Is cargo space limited?** If yes, "what do we keep" becomes a co-op negotiation.
+- **Where does fuel come from?** Range = fuel is decided ([World & Structure](../level-design/world-structure.md)), but the [economy](../game/economy.md) never sources it: do you buy fuel, scavenge it, or is it just a run timer? And does running dry strand you mid-zone or end the run? ([The Car](../game/the-car.md) flags this too.)
+- **Car damage & repair model:** the car has HP, takes damage, and is repaired in the hub, and the wear shader is built to show it — but the actual numbers (how much HP, how repair is priced, what a beaten car costs) aren't specified anywhere, and they're tangled with what death costs.
 - **`R` key conflict:** wall-drive toggle vs. rocket pot fire, both on R, one has to move before wall-drive is re-enabled. *(Jump input resolved: it shipped on Q.)*
 
 ## Technical (needs testing, not discussion)
