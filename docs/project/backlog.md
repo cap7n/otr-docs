@@ -42,6 +42,23 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove
 - [ ] **Fix square shadows:** smooth the turret meshes; if that's not enough, raise positional shadow atlas size / light softness
 
+### Scrapyard zone (in build — hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
+
+- [ ] 🔨 **Junk blocks (nondescript compacted-metal bricks):** modeling now; deliberately not car-shaped — it's what a compactor actually spits out. Replaces the steel-cube placeholders in the block yard
+- [ ] **Crushed car cube + paint variants:** ~2.2×1.7×1.1 m crumpled box, one material slot named `CarCube` (name = the import-remap socket); faded red/blue/yellow/white paint over rust variants
+- [ ] **Row-builder tool:** give it a start/end line → MultiMesh wall of stacked cubes with random variant/rotation/jitter; builds the graveyard rows and the shelter palisade
+- [ ] **Scatter tool:** "sprinkle N of prop X in this region / along this lane edge, seeded" → MultiMesh; prerequisite for every dressing pass
+- [ ] **Lane-edge hero props, one at a time through the pipeline:** tire (single + stack) → barrel/drum → washing machine → dumpster/container → fridge. Free prototype models may stand in as scatter placeholders meanwhile; finals go through the pipeline (no photo textures)
+- [ ] **Landmarks:** compactor building + crane (possibly still running — sound + slow motion), weighbridge + booth at the plaza, shelter builds (shack, watchtower; palisade reuses car cubes)
+- [ ] **Gate module — build once, use 4× in every zone:** door slab, frame, and the open/closed light fixtures (the diegetic exit signal). In the scrapyard: N/E open, W barricaded by the shelter, S standing in raw ground with no road (never seen open)
+- [ ] **Dedicated dirt ground tile:** zone ground currently borrows the concrete roughness map for grain; bake a real dirt tile (pebbles, tire ruts on lanes)
+- [ ] **Zone-map channels G + B:** G = human footpaths (albedo wear only — feet don't compact terrain), B = burn-zone scorch tint. Mask generator writes RGB, ground shader reads them (hooks already documented in the shader)
+- [ ] **Burn zone dressing:** smoke columns, ember glow at the pits; ties into the fire-patch hazard when it exists
+- [ ] **Extraction scar at the dead-end road:** the old intake road runs into the N wall mid-route; one hero object at the cut (sliced sign, half a truck) makes the story land
+- [ ] **Puddles in the low spots** (existing puddle shader)
+- [ ] **Zone footprint rework:** 2×2 km of pure yard reads too big. Direction: fenced yard core (~600–800 m, dense) + the extracted surroundings (access road, wasteland, shelter outside the fence) — fits the sampling fiction and gives a sparse→dense intensity gradient. Reshaping in progress
+- [ ] **Bake the pile scale factor into the mound prep tool** once in-game testing locks it (current read: canyon piles ~20–25 m, sprinkles 8–12 m; proximity to the lane matters as much as height)
+
 ## Code health (from the July 2026 audit)
 
 - [ ] 🔨 **RPC sender validation on 4 input handlers:** running as background task; seat-shared controls (handbrake!) must keep working
@@ -87,6 +104,8 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 ## Done
 
 *(Move checked items here with a date, it feels good and it's useful history.)*
+
+- [x] 2026-07-07: **Scrapyard zone build started (hub_v2 as test bed).** Zone plan map: workflow-worn roads (truck arterial, service loop, desire-path corner cuts, filleted junctions) in two generations — the yard's historical network dead-ends at the N wall where the extraction cut it, plus straight bulldozed connectors to the megastructure gates. Built: heightfield floor generator (2 m grid, one HeightMapShape3D collider, seeded noise, road flatten-mask so terrain and roads can never disagree), mask rasterizer from the plan, colored per-section blockout, six sculpted trash mounds through a prep tool (decimate + collision twin + canonical height) placed as the scrap mountains, scrap-mass tileable material (junk cells, rare paint chips, world-triplanar so instance scaling is safe) with a macro-mottle detail layer against tiling repetition, and a zone ground shader blending packed road dirt vs yard dirt from the same mask that shapes the terrain
 
 - [x] 2026-07-06: **Blender→Godot asset pipeline built and proven** (`Desktop/OTR Assets`: procedural material scripts, lookdev blends with preview renders, tileable + per-object bakers). Two assets shipped same day: **MegaPipeV2** (weathered metal + rust, flowing-water shader untouched, materials remapped by name in .import) and **shell concrete v2** (baked tile + slim hybrid shader: per-panel tint/mirror-flip, macro patches, floor grime, close-up detail bump). Killed the 2 km shimmering-lines wall artifact (procedural math can't be mip-filtered) and the inverted wall lighting (RGTC-compressed normal maps drop the blue channel — shader now reconstructs it)
 
