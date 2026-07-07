@@ -16,6 +16,8 @@ But the seats are not two solo games sharing a screen. **Each player's actions r
 
 That coupling is the real design target, deeper than "keep both players busy." Two players who are each busy but *independent* are playing solo next to each other. Two players whose actions bend each other's decisions are playing OTR.
 
+**Made concrete in combat:** the driver deals no direct damage — every gun belongs to the co-pilot ([combat split](project/decisions.md), [Weapons & Combat](game/weapons-combat.md)). A driver with an empty co-pilot seat can move and ram but cannot *kill*: exposed, half-blind, reacting to threats they can't answer. When that seat is empty the driver should feel **panic, almost disorientation** — and that's not a punishment bolted on, it's the plainest proof that the co-pilot was never just a passenger.
+
 ## The moment we're building toward
 
 > The co-pilot fires a harpoon and latches an enemy. The driver reads the line, throws the car into a sharp corner, and slings the thing into a wall — or into the enemy behind it.

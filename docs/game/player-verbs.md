@@ -29,6 +29,8 @@ Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot)
 | Fire rockets | Fire button | |
 | Scan surroundings | - | Elevated view; spots shortcut cues the driver can't see |
 
+Full arsenal, swap slots, and combat roles: [Weapons & Combat](weapons-combat.md). The co-pilot owns *all* the damage — the driver deals none beyond ramming.
+
 ## Drone pilot
 
 | Verb | Input | Notes |

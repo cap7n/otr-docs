@@ -38,6 +38,9 @@ Beyond steer and throttle, the car has active abilities that make driving its ow
 
 *(Status verified against code, 2026-07. Full behaviour and build order in [Car Abilities](../systems/car-abilities.md).)*
 
+!!! note "Combat direction"
+    Under the [combat split](../project/decisions.md), the driver deals **no direct damage** — ramming only — and all guns belong to the co-pilot ([Weapons & Combat](../game/weapons-combat.md)). The flamethrower and rocket pot above are built on the driver but predate that rule; where they land is an [open question](../project/open-questions.md). The driver's future kit is mobility plus **space-making** (AoE stun / push-away), not offense.
+
 ## The trailer: cargo, drone, and reach
 
 The car tows a **trailer**, and the trailer is the run's whole economy in physical form:
