@@ -42,6 +42,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove
 - [ ] **Fix square shadows:** smooth the turret meshes; if that's not enough, raise positional shadow atlas size / light softness
 - [ ] **Crisp car shadow (may need its own system):** the car wants a sharp, readable ground shadow up close; the shared positional shadow atlas isn't crisp enough at car scale. Likely warrants a dedicated approach — a high-res per-car shadow, or a stylised blob/contact shadow projected under the chassis — rather than leaning on the global atlas. Proposed 2026-07-09
+- [ ] **Working windshield wipers:** shader-driven, integrated into the `car_glass` grime layer — NOT a decal (a decal can't subtract the shader's procedural grime). Tier A: a `wiper_angle` uniform swept by a small controller script; the glass shader clears grime in the swept arc with a wet smear at the blade. Tier B (later): a SubViewport grime-accumulation buffer for real streaks and re-dirtying between passes. Physical blade mesh (model in Blender) rotates in sync off the same angle. Nice hook: driving through the swamp/mud dirties the glass so the wipers have a job. Proposed 2026-07-09
 
 ### Scrapyard zone (in build — hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
 
