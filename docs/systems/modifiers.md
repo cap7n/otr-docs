@@ -41,7 +41,7 @@ Without modifiers, every run plays the same. Risk/reward trade-offs give skilled
 | **Big Head Mode** | Enemy meshes ×2, easier to hit, looks ridiculous |
 | **Turbo Fuse** | All explosions ×3 radius (theirs AND yours) |
 | **Ricochet** | Turret bullets bounce off walls once |
-| **Earthquake** | Random shake + physics impulses every 10–20s |
+| **Earthquake** | Random shake + physics impulses every 10-20s |
 
 ---
 

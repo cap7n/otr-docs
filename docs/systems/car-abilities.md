@@ -40,7 +40,7 @@ Can be unlocked via CAR_MOD items from the shop or available from the start, dec
 - Single charge with cooldown, upgradeable to multiple.
 - VFX: dust burst under wheels; landing triggers camera shake.
 
-**Input:** ✅ Resolved — shipped on **Q**. The tap-Space-jump / hold-Space-handbrake idea was dropped in favour of a dedicated key.
+**Input:** ✅ Resolved - shipped on **Q**. The tap-Space-jump / hold-Space-handbrake idea was dropped in favour of a dedicated key.
 
 ---
 

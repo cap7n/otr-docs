@@ -31,7 +31,7 @@ Without hazards, the breather sections between encounters are just empty road. H
 
 ## Placement philosophy
 
-- **Breather sections:** 1–2 hazards as the only challenge. Driver-focused, no enemies.
+- **Breather sections:** 1-2 hazards as the only challenge. Driver-focused, no enemies.
 - **During encounters:** lighter hazards (one vent, one fire patch) combined with enemies.
 - **Boss fight:** the boss can trigger hazards as attack patterns (laser ignites fuel barrels; slams collapse floor).
 

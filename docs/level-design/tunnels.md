@@ -6,8 +6,8 @@
 
 Since the [World & Structure](world-structure.md) decision, "the level" is **two layers**, and this page is about the second:
 
-- **Zones** are the authored *destinations* — ~2 km hand-built spaces you drive into, fight and loot through, and exit through one of four wall gates. The full session arc (opening → complication → fork → climax → exit) is authored *here*; the [first authored zone](../project/backlog.md) is the current headline level-design task.
-- **Tunnels** are the *connective tissue* between zones — squeezes, caverns, junctions, wall-drive sections — and double as the diegetic loading screen: a tense 5–10 minute drive during which the old zone unloads and the next streams in, with no loading screen ever shown.
+- **Zones** are the authored *destinations* - ~2 km hand-built spaces you drive into, fight and loot through, and exit through one of four wall gates. The full session arc (opening → complication → fork → climax → exit) is authored *here*; the [first authored zone](../project/backlog.md) is the current headline level-design task.
+- **Tunnels** are the *connective tissue* between zones - squeezes, caverns, junctions, wall-drive sections - and double as the diegetic loading screen: a tense 5-10 minute drive during which the old zone unloads and the next streams in, with no loading screen ever shown.
 
 The room grammar below is the shared vocabulary for both, but tunnels own confinement, spectacle (wall-drive), and the between-zone breather, while zones own the encounter-heavy set-pieces. Everything under "Why tunnels" is why confinement is the right *default* shape for OTR's level design.
 
@@ -32,7 +32,7 @@ The failure mode of tunnels is monotony. The fix is varying the space itself, ea
 | **Junction / fork** | Decision. Risk/reward path choice ([shortcuts](../systems/shortcuts.md)) |
 | **Collapsed section** | Pace break. Drone scouts, on-foot beat, or gate weak-point puzzle |
 | **Wall-drive section** | Spectacle. Road curves up the wall/ceiling ([car abilities](../systems/car-abilities.md)) |
-| **Breather stretch** | Recovery. 1–2 hazards only, no enemies ([hazards](../systems/hazards.md)) |
+| **Breather stretch** | Recovery. 1-2 hazards only, no enemies ([hazards](../systems/hazards.md)) |
 
 ## Design a route like a session
 
