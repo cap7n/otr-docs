@@ -12,7 +12,7 @@ Rough sequencing. The project runs issue-driven - solve one system, ship it, mov
 - Destructibles: barricades, locked gates (incl. objective-unlock hook)
 - Hub: shop, sell platform, stasis cargo
 - Loot & currency loop
-- Start/end zone gates (A→B→hub loop closed)
+- Start/end zone gates (A->B->hub loop closed)
 - **Car abilities: nitro, jump (Q), flamethrower, rocket pot, rocket thrust** - all built and live
 - Engine audio system (recorded source, RPM-band crossfade blender, virtual gearbox, D/S/T drive modes)
 - Post-processing stack (fog, SSAO, SDFGI, glow, custom shader)
@@ -22,7 +22,7 @@ Rough sequencing. The project runs issue-driven - solve one system, ship it, mov
 
 1. **Decide the run ending & stakes** ([open question #1](open-questions.md)) - blocks everything below
 2. Fix tunnel shadows; first lighting/atmosphere pass
-3. **Author the first zone** beat-by-beat: opening encounter → complication → fork → climax → exit gate ([World & Structure](../level-design/world-structure.md), [The Tunnels](../level-design/tunnels.md))
+3. **Author the first zone** beat-by-beat: opening encounter -> complication -> fork -> climax -> exit gate ([World & Structure](../level-design/world-structure.md), [The Tunnels](../level-design/tunnels.md))
 4. First hazards: steam vent, fire patch ([hazards](../systems/hazards.md))
 5. First shortcut: destructible wall + side path ([shortcuts](../systems/shortcuts.md))
 

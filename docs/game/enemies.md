@@ -5,7 +5,7 @@ The current roster, all implemented and working.
 ## Hostiles
 
 ### Melee Orb
-Sphere-type rusher. Wanders → hunts → charges the car. Explodes on death (full damage inner radius, falloff outer). Can be roadkilled, gets launched with speed-scaled impulse. ~50% loot drop chance.
+Sphere-type rusher. Wanders -> hunts -> charges the car. Explodes on death (full damage inner radius, falloff outer). Can be roadkilled, gets launched with speed-scaled impulse. ~50% loot drop chance.
 
 ### Flying Enemy
 Aerial. Hovers, orbits, dive-attacks, and fires projectiles from above. Knockback + stagger on hit. Pooled for performance.
@@ -14,7 +14,7 @@ Aerial. Hovers, orbits, dive-attacks, and fires projectiles from above. Knockbac
 Ground shooter. Keeps distance, fires aimed projectiles. Vulnerable to being rammed.
 
 ### Boss (benched, "maybe I'll use it", 2026-07)
-500 HP, phase-based: idle → charging → firing → cooldown, with flinch interrupts (25% on hit). Fires a tracking laser (25 DPS on target, leads the car's movement). **Enrages at 50% HP**, cycles 60% faster. Moves along a path.
+500 HP, phase-based: idle -> charging -> firing -> cooldown, with flinch interrupts (25% on hit). Fires a tracking laser (25 DPS on target, leads the car's movement). **Enrages at 50% HP**, cycles 60% faster. Moves along a path.
 
 !!! warning "Status"
     Doesn't feel good yet, needs love before it earns a place in a route. Don't design climaxes that depend on it: use a horde-in-cavern or an escape set-piece instead.

@@ -24,7 +24,7 @@ Without hazards, the breather sections between encounters are just empty road. H
 |---|---|---|
 | **Falling rocks** | Speed rewards, outrun the drop. Gunner can pre-trigger stalactites. | Falling dust, pebbles ~0.5s early, cracking sound |
 | **Steam vents** | Pattern reading, 2s on / 3s off cycle; push force + light damage | Hiss + glow 1s before blast |
-| **Flooded section** | Momentum, drag and traction loss; deep water stalls the engine. Rewards commitment, punishes hesitation | Visible water, shallow → deep |
+| **Flooded section** | Momentum, drag and traction loss; deep water stalls the engine. Rewards commitment, punishes hesitation | Visible water, shallow -> deep |
 | **Fire patches** | Path choice, fires don't cover the full width; pick a line. Tick damage | Fire + orange wall glow, crackling |
 | **Collapsing floor** | Speed check, fast clears the gap, slow falls in. "Hit nitro NOW" moments | Floor cracks, cracking audio, crumbles edge-in |
 | **Swinging obstacles** | Timing, pendulums across the tunnel; blast through between swings or wait | Always visible + creaking metal |

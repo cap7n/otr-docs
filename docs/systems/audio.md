@@ -10,7 +10,7 @@ The car is the co-op living room - its engine is the soundtrack of every run. Th
 
 ## Source recordings
 
-Recorded from **AngeTheGreat's Engine Simulator CE v0.1.14a** (engine: base GM LS, ~6500 redline) through a Wave Link → ffmpeg capture chain. One session = 33 clips: idle ×2, on-throttle RPM holds 1500-6500, off-throttle holds 1500-6000, sweeps, blips, limiter, startup, shutdown.
+Recorded from **AngeTheGreat's Engine Simulator CE v0.1.14a** (engine: base GM LS, ~6500 redline) through a Wave Link -> ffmpeg capture chain. One session = 33 clips: idle x2, on-throttle RPM holds 1500-6500, off-throttle holds 1500-6000, sweeps, blips, limiter, startup, shutdown.
 
 - Raw takes + all tooling live in `OTR COWORK/OTR/Tools/EngineRecorder/` (guided recording script, loop processor, click analyzer, game-audio capture).
 - Processing: automatic stable-window selection, cycle-aligned seamless loop cuts, crossfaded seams, de-clicking (the sim bakes crackle into quiet takes), peak normalization.
@@ -31,8 +31,8 @@ RPM itself is **virtual** (`car_audio_controller.gd`) - the car physics has no e
 | Key | Action |
 |-----|--------|
 | **I** | Ignition on/off (car spawns OFF; startup/shutdown one-shots) |
-| **G** | Neutral ⇄ Drive - in N, W free-revs with no drive power |
-| **M** | Cycle drive mode **D → S → T** (shown as the HUD gear letter) |
+| **G** | Neutral <-> Drive - in N, W free-revs with no drive power |
+| **M** | Cycle drive mode **D -> S -> T** (shown as the HUD gear letter) |
 
 Drive modes shape **real physics** (throttle response + top speed in car.gd), not just sound. Pick the tool for the situation:
 
@@ -44,15 +44,15 @@ Drive modes shape **real physics** (throttle response + top speed in car.gd), no
 
 ### Networking
 
-Driver input → server-authoritative state → synced to all peers via tick fields `th` (throttle), `eng` (ignition), `ntr` (neutral), `dm` (drive mode). These fields dirty-flag the car in NetworkTickManager so a **parked** car still propagates ignition/revving. Ignition and mode RPCs validate the sender is the seated driver.
+Driver input -> server-authoritative state -> synced to all peers via tick fields `th` (throttle), `eng` (ignition), `ntr` (neutral), `dm` (drive mode). These fields dirty-flag the car in NetworkTickManager so a **parked** car still propagates ignition/revving. Ignition and mode RPCs validate the sender is the seated driver.
 
 ## Tuning & debugging
 
 Everything is Inspector-tunable, no code:
 
 - **Car (car.gd):** per-mode throttle response + speed scale (*Drive Modes* group).
-- **Car → audio controller node:** gear ratios (`gear_top_speeds_kmh`), per-mode shift points (*Drive Mode Shift Points* group), limiter bounce feel (*Rev Limiter* group).
-- **Car → EngineSoundBlender node:** stack/gain fade speeds, idle fade, pitch clamps, `limiter_rpm`.
+- **Car -> audio controller node:** gear ratios (`gear_top_speeds_kmh`), per-mode shift points (*Drive Mode Shift Points* group), limiter bounce feel (*Rev Limiter* group).
+- **Car -> EngineSoundBlender node:** stack/gain fade speeds, idle fade, pitch clamps, `limiter_rpm`.
 - **`show_debug` on EngineSoundBlender:** live overlay - RPM, throttle, run state, every audible loop with gain and pitch. Works via Remote tree while the game runs.
 - **`record_game.ps1`** (COWORK tools): captures game audio through the Wave Link chain and auto-runs the click detector - for pinpointing pops/chirps by timestamp.
 

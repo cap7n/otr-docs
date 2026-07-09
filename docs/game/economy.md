@@ -5,7 +5,7 @@ The material loop that makes runs worth repeating.
 ## The flow
 
 ```
-Enemies drop loot → pick up → stash in cargo box → survive → sell in hub → buy upgrades → stronger runs
+Enemies drop loot -> pick up -> stash in cargo box -> survive -> sell in hub -> buy upgrades -> stronger runs
 ```
 
 ## Loot
@@ -35,5 +35,5 @@ Earned by selling loot. [Run modifiers](../systems/modifiers.md) will scale curr
 
 ## Open economic questions
 
-- **What do you lose on death?** Carried loot? Everything since the last hub visit? Nothing? This defines how much tension the run has. → [Open Questions](../project/open-questions.md)
+- **What do you lose on death?** Carried loot? Everything since the last hub visit? Nothing? This defines how much tension the run has. -> [Open Questions](../project/open-questions.md)
 - **Is hauling a choice?** If the cargo box has limited space, "what do we keep" becomes a co-op negotiation. Undecided.

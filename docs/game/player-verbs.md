@@ -25,7 +25,7 @@ Seat state lives on the car: **Driver / Passenger / Gun / Drone** (plus on-foot)
 
 | Verb | Input | Notes |
 |---|---|---|
-| Aim turret | Mouse | Yaw ±90°, pitch ±30° |
+| Aim turret | Mouse | Yaw +/-90 deg, pitch +/-30 deg |
 | Fire rockets | Fire button | |
 | Scan surroundings | - | Elevated view; spots shortcut cues the driver can't see |
 
@@ -62,4 +62,4 @@ The drone has limited lives per run.
     A beat that only uses **driver** verbs is single-player content. The good stuff uses at least one verb from each column at the same time, driver threads a hazard *while* the gunner shoots open a shortcut wall *while* deciding whether to stop for the loot room the drone just found. See [Co-op Design Principles](../co-op-design.md).
 
 !!! note "Input overlaps (intentional, context-sensitive)"
-    Space = jump + handbrake · S = walk back + brake · E = interact + drone rotate · Ctrl = crouch + drone down · R = wall-drive + fire rocket (conflict, unresolved). Check existing bindings before adding new ones.
+    Space = jump + handbrake, S = walk back + brake, E = interact + drone rotate, Ctrl = crouch + drone down, R = wall-drive + fire rocket (conflict, unresolved). Check existing bindings before adding new ones.

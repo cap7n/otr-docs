@@ -29,7 +29,7 @@ One launcher, two ammo modes:
 - **Rebar:** big single hits - impale a heavy, pin a target in place, crack open destructibles and gate weak-points. Slow, heavy, punchy.
 - **Harpoon:** the same launcher, cabled - latch an enemy so the driver can sling it into a wall or another enemy. This is the [north-star co-op combo](../co-op-design.md): the harpoon does almost no damage itself; the *driver's corner* is what kills.
 
-It's near-irreplaceable, so instead of swapping the whole weapon it upgrades by **rebar material** - iron → titanium - for more penetration and impale force. **Limit:** cooldown, one tether at a time. **Firing mechanism** (crossbow / gunpowder / air-pressure off the car / railgun) is [undecided](../project/open-questions.md).
+It's near-irreplaceable, so instead of swapping the whole weapon it upgrades by **rebar material** - iron -> titanium - for more penetration and impale force. **Limit:** cooldown, one tether at a time. **Firing mechanism** (crossbow / gunpowder / air-pressure off the car / railgun) is [undecided](../project/open-questions.md).
 
 ### Rockets - burst & area
 - **Role:** burst damage and AoE - clear a clump, or dump a lot of damage into a weak point.
@@ -37,7 +37,7 @@ It's near-irreplaceable, so instead of swapping the whole weapon it upgrades by 
 
 ## Ramming - the driver's only weapon
 
-Mass × speed. Roadkill the small stuff (speed-scaled launch impulse), shove the big stuff into hazards or into each other. **Bumper and plow upgrades** are the driver's damage identity - they make ramming hit harder without ever handing the driver a trigger. Heavyweight-style mass upgrades lean all the way into it ([Economy & Loot](economy.md), [The Car](the-car.md)).
+Mass x speed. Roadkill the small stuff (speed-scaled launch impulse), shove the big stuff into hazards or into each other. **Bumper and plow upgrades** are the driver's damage identity - they make ramming hit harder without ever handing the driver a trigger. Heavyweight-style mass upgrades lean all the way into it ([Economy & Loot](economy.md), [The Car](the-car.md)).
 
 ## On foot: tools, not guns
 

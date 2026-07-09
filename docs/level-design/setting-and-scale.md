@@ -40,7 +40,7 @@ Surface-clean to deep-monstrous runs on the same axis as difficulty. Early tunne
 ## How it's built (see also [The Tunnels](tunnels.md))
 
 - Large caverns are **real static mesh, not skybox**, a skybox has no parallax and no light/fog response, and the drone would fly right up to it. See the reasoning in the build notes.
-- Caverns are mostly static → **bake the lighting** (LightmapGI) instead of dynamic GI. Cheap at runtime, looks great, this is why Godot handles the scope (see [Decision Log](../project/decisions.md)).
+- Caverns are mostly static -> **bake the lighting** (LightmapGI) instead of dynamic GI. Cheap at runtime, looks great, this is why Godot handles the scope (see [Decision Log](../project/decisions.md)).
 - Read scale through **light, not geometry:** volumetric light shafts through fog, sparse points of light at height, a fog gradient that dissolves the ceiling. The shell mesh can be low-detail because it's always far and dark.
 - New kit tiers this setting adds: **cavern shell** pieces, a **megastructure prop set** (crane, pillars, facility facade, catwalks, mostly silhouette + normal map), and a reusable **light-shaft prefab** (hole mesh + spotlight + fog volume).
 

@@ -3,9 +3,9 @@
 The run structure, from boot to repeat.
 
 ```
-Main Menu → Lobby (Steam) → Hub → Run (tunnel) → back to Hub → Run again…
-                                      ↓
-                              Car destroyed → Death screen → Hub
+Main Menu -> Lobby (Steam) -> Hub -> Run (tunnel) -> back to Hub -> Run again...
+                                      v
+                              Car destroyed -> Death screen -> Hub
 ```
 
 ## 1. Lobby
@@ -32,14 +32,14 @@ Drive into the tunnel. While inside:
 
 ## 4. Run end
 
-- **Lose:** the car is destroyed → death screen → back to the hub. *(What happens to carried loot on death is an [open question](../project/open-questions.md).)*
-- **Finish:** ✅ implemented, mechanically. The level has a **start zone** and an **end zone** (level gate / return gate: detect + countdown); reaching the end zone puts you back into the hub. A→B works.
+- **Lose:** the car is destroyed -> death screen -> back to the hub. *(What happens to carried loot on death is an [open question](../project/open-questions.md).)*
+- **Finish:** ✅ implemented, mechanically. The level has a **start zone** and an **end zone** (level gate / return gate: detect + countdown); reaching the end zone puts you back into the hub. A->B works.
 - **Bonus discovery (code audit 2026-07):** the return gate is **locked by default** and exposes `unlock()`, meant to be called "when the level's objective is complete". The mounting point for a run goal already exists in code; nothing calls it yet.
 - **Goal:** ❓ **Undecided.** Reaching B doesn't *mean* anything yet, no reward for arriving, no pressure on the way, no reason to hurry or to detour. The skeleton is done; the stakes are the open design question. See [Open Questions](../project/open-questions.md).
 
 ## 5. Back in the hub
 
-Sell loot → buy upgrades → repair → pick modifiers → go again. Currency and unlocks persist; the loop is the game.
+Sell loot -> buy upgrades -> repair -> pick modifiers -> go again. Currency and unlocks persist; the loop is the game.
 
 !!! warning "The missing piece"
-    The full loop (hub → run → end zone → hub) exists in the game today. What's missing is the *why*: what makes reaching the end zone matter, and what turns the drive in between into a run worth repeating. That decision (extraction pressure vs. authored gauntlet, see [Open Questions](../project/open-questions.md)) shapes every level-design decision downstream.
+    The full loop (hub -> run -> end zone -> hub) exists in the game today. What's missing is the *why*: what makes reaching the end zone matter, and what turns the drive in between into a run worth repeating. That decision (extraction pressure vs. authored gauntlet, see [Open Questions](../project/open-questions.md)) shapes every level-design decision downstream.

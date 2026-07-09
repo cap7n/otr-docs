@@ -28,9 +28,9 @@ Every encounter, hazard, and secret is designed to ask two questions at once: *w
 | Seats: driver / passenger / turret / drone | ✅ Working |
 | Enemies (melee, flying, ranged, boss, turrets) | ✅ Working |
 | Hub with shop, loot, cargo stasis | ✅ Working |
-| round1_a | 🧪 Tech demo/testbed (outdoor terrain, ~1.4×2.5 km); proved gates, hordes, telemetry |
+| round1_a | 🧪 Tech demo/testbed (outdoor terrain, ~1.4x2.5 km); proved gates, hordes, telemetry |
 | The real level (tunnel) | 📋 Not started; begins with kit profile + blockout |
-| Run gates (start zone → end zone → hub) | ✅ Working, incl. objective unlock hook |
+| Run gates (start zone -> end zone -> hub) | ✅ Working, incl. objective unlock hook |
 | Car abilities: nitro, jump, flamethrower, rockets | ✅ Built and live |
 | Car abilities: wall-drive, drift | ⚠️ Coded, switched off (setup commented out) |
 | Environmental hazards | 📋 Planned |
