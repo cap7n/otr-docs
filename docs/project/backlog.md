@@ -41,6 +41,7 @@ Conventions: `🔨` = in progress · `⛔` = blocked by a decision or another it
 - [ ] **Tunnel kit cross-section profile:** the one profile all modular pieces share; decide before modeling any kit piece
 - [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove
 - [ ] **Fix square shadows:** smooth the turret meshes; if that's not enough, raise positional shadow atlas size / light softness
+- [ ] **Crisp car shadow (may need its own system):** the car wants a sharp, readable ground shadow up close; the shared positional shadow atlas isn't crisp enough at car scale. Likely warrants a dedicated approach — a high-res per-car shadow, or a stylised blob/contact shadow projected under the chassis — rather than leaning on the global atlas. Proposed 2026-07-09
 
 ### Scrapyard zone (in build — hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
 
