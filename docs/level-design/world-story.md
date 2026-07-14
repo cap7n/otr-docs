@@ -8,9 +8,9 @@
 
 The megastructure is a **prospector**: it samples spaces of planets across time and space. Zones are samples - chunks of worlds cut out and brought inside. The extraction scar in the scrapyard (the road that dead-ends at the wall) is the signature of the cut, and every zone border should show one: sliced buildings, truncated pipes, a river ending in a wall. The cut edge is the cheapest storytelling asset we have.
 
-**Why the crust and not the core:** a core is worthless to something that can cross spacetime. Molten iron is identical everywhere in the universe - infinitely abundant, zero information. The crust is the only layer where matter has been *arranged*: by weather, by life, by civilizations building things and throwing them away. The Prospector doesn't mine material, it mines **arrangement**. A junkyard is a rich sample, not a trash one - matter arranged twice, once by manufacture, once by a culture deciding what to discard.
+**Why the crust and not the core:** a core is worthless to something that can cross spacetime. Molten iron is identical everywhere in the universe - infinitely abundant, zero information. The crust is the only layer where matter has been *arranged*: by weather, by life, by civilizations building things and throwing them away. The Prospector doesn't mine material, it mines **arrangement**. (*Arrangement* has a name and a substance: **Pratina** - see [Pratina](pratina.md).) A junkyard is a rich sample, not a trash one - matter arranged twice, once by manufacture, once by a culture deciding what to discard.
 
-**Consequence for the economy:** what the structure values and what players sell are the same thing. Prices are the structure's own appraisals of arrangement. Loot value = information value.
+**Consequence for the economy:** what the structure values and what players sell are the same thing. Prices are the structure's own appraisals of arrangement. Loot value = information value = **Pratina density** ([Pratina](pratina.md)).
 
 **Zone-writing tool:** every zone gets three stats that write its level design - *where it was cut from, how long it's been inside, what processing stage it's at.* Fresh sample: intact, native ecology panicking. Mid-process: sorted, tagged, machinery active. Late stage: crushed, mounded, half-absorbed into the structure.
 
