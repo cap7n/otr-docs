@@ -2,9 +2,40 @@
 
 Things we've said **yes** to that aren't built yet. Not to be confused with [Open Questions](open-questions.md) (undecided) or the [Roadmap](roadmap.md) (the big-picture order). This is the working list: pick an item, build it, check it off.
 
+**How this page is ordered (2026-07-14 restructure):** sections are sorted by how directly they lead to the first real, complete run - hub -> authored zone -> objective -> home, with the pillar intact. **Now** is the short list; when it's empty, pull the next item up from **Critical path**. Everything else is grouped by kind, same as before.
+
 Conventions: `🔨` = in progress, `⛔` = blocked by a decision or another item, unmarked = ready to pick up.
 
 *Statuses verified against code, 2026-07-04. If a doc and the code disagree, the code wins.*
+
+## Now — top priority
+
+1. [ ] ⭐ **Move the flamethrower and rocket pot to the co-pilot:** both are built on the driver, but the combat split gives all damage to the co-pilot ([Weapons & Combat](../game/weapons-combat.md)). Resolve the contradiction in the pillar's favor. Decided 2026-07-14 (move from Open Questions to the [Decision Log](decisions.md) when done).
+   **Addendum - the one version that keeps rockets on the driver:** rockets reframed as *path-clearing tools* - breakable gates, destructible walls - not enemy-killers. That makes them a driving verb (the driver shapes the road, the co-pilot shapes the fight) and doesn't break the no-damage rule, *as long as they do no meaningful enemy damage*. If they keep real DPS against enemies, they move to the co-pilot with the flamethrower.
+2. [ ] 🔨 **Junk blocks (nondescript compacted-metal bricks):** modeling now; deliberately not car-shaped - it's what a compactor actually spits out. Replaces the steel-cube placeholders in the block yard
+3. [ ] 🔨 **RPC sender validation on 4 input handlers:** running as background task; seat-shared controls (handbrake!) must keep working
+4. [ ] 🔨 **Globals.DEBUG flag + gate 50+ prints:** running as background task
+
+## Critical path: the first real run
+
+The chain that turns "A->B works" into "a run worth repeating." Roughly in order; the ⛔ items at the end need Open Question 1 (saving & stakes) answered first.
+
+- [ ] **Wire an objective to return_gate.unlock():** the gate already supports "locked until objective complete", nothing calls it yet; this is where the run's goal plugs in
+- [ ] **Gate countdown UI:** logic done, TODOs in level_gate.gd and return_gate.gd are display-only
+- [ ] **Gate module - build once, use 4x in every zone:** door slab, frame, and the open/closed light fixtures (the diegetic exit signal). In the scrapyard: N/E open, W barricaded by the shelter, S standing in raw ground with no road (never seen open)
+- [ ] **Diegetic exit signals:** lights on zone walls (or similar in-world tells) showing which exits are open this cycle
+- [ ] **Tunnel kit cross-section profile:** the one profile all modular pieces share; decide before modeling any kit piece
+- [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove
+- [ ] **Cavern lighting test:** one gray-box cavern: baked LightmapGI + volumetric fog + light shafts + distant emissives; proves the megalophobia works ([Setting & Scale](../level-design/setting-and-scale.md))
+- [ ] **First authored zone (new level):** the garage's neighboring zone, built session-style: opening encounter, complication, fork, climax (set-piece, not boss), exit through a wall gate. round1_a is a tech demo, not the target ([World & Structure](../level-design/world-structure.md), [The Tunnels](../level-design/tunnels.md))
+- [ ] **First hazards: steam vent + fire patch:** none of the six hazards exist in code ([hazards plan](../systems/hazards.md))
+- [ ] **First shortcut: destructible wall + side path:** junk_barricade/locked_gate exist as main-path obstacles; the optional side-path variant doesn't ([plan](../systems/shortcuts.md))
+- [ ] **First landmark enemy (method-to-kill):** a one-of-a-kind, zone-specific encounter beaten by a *method*, not a health bar - e.g. harpoon-trip a tall quadruped then hit the exposed head, or lure it into a hazard ([Landmark Enemies & Bosses](../game/landmark-enemies.md)). Rides with the first authored zone
+- [ ] **Interactable loot chest:** opens on E, loot table, server-authoritative; no chest entity exists yet
+- [ ] **Save file:** user:// ConfigFile autoload for currency + unlocks; confirmed absent, prerequisite for junker and modifier unlocks
+- [ ] **Battery leash:** on-foot power timer (~30-60s), gray-screen desaturation as it fails, stumble back to the car to recharge ([World & Structure](../level-design/world-structure.md))
+- [ ] ⛔ **Junker package:** unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the saving/stakes decision ([open question 1](open-questions.md))
+- [ ] ⛔ **What death costs (loot loss, repair costs):** blocked on the saving/stakes decision
 
 ## Quick wins (code exists, one switch away)
 
@@ -12,48 +43,31 @@ Conventions: `🔨` = in progress, `⛔` = blocked by a decision or another item
 - [ ] **Re-enable drift:** same story, complete controller, `setup()` commented out (car.gd:329)
 - [ ] **Wire visual wear to damage:** the wear shader system (scratches/rust/dirt) is built and synced, but nothing increments it during gameplay; hook it to car damage events
 
-## Gameplay systems
+## Gameplay systems (after the loop grips)
 
-- [ ] **First hazards: steam vent + fire patch:** none of the six hazards exist in code ([hazards plan](../systems/hazards.md))
-- [ ] **Remaining hazards:** falling rocks, flooded zone, collapsing floor, swinging obstacles
-- [ ] **First shortcut: destructible wall + side path:** junk_barricade/locked_gate exist as main-path obstacles; the optional side-path variant doesn't ([plan](../systems/shortcuts.md))
-- [ ] **Interactable loot chest:** opens on E, loot table, server-authoritative; no chest entity exists yet
-- [ ] **Gate countdown UI:** logic done, TODOs in level_gate.gd and return_gate.gd are display-only
-- [ ] **Wire an objective to return_gate.unlock():** the gate already supports "locked until objective complete", nothing calls it yet; this is where the run's goal plugs in
-- [ ] **Save file:** user:// ConfigFile autoload for currency + unlocks; confirmed absent, prerequisite for junker and modifier unlocks
-- [ ] **Battery leash:** on-foot power timer (~30-60s), gray-screen desaturation as it fails, stumble back to the car to recharge ([World & Structure](../level-design/world-structure.md))
-- [ ] **Drone signal tether:** drone limited by signal range from the car, not battery; static/interference as it nears the edge
-- [ ] **Diegetic exit signals:** lights on zone walls (or similar in-world tells) showing which exits are open this cycle
-- [ ] ⛔ **Junker package:** unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the saving/stakes decision ([open question 1](open-questions.md))
-- [ ] ⛔ **What death costs (loot loss, repair costs):** blocked on the saving/stakes decision
-- [ ] **Flank enemy:** paces alongside the car in bursts, the honest "keeps up" enemy ([threat directions](../game/enemies.md))
 - [ ] **Harpoon / tether tool (co-op combo enabler):** co-pilot latches an enemy, the driver's cornering slings it into a wall or other enemies - the archetypal two-seat combo ([Co-op Design Principles](../co-op-design.md)). Proposed 2026-07; no tether exists in code
-- [ ] **Terrain-impact deflection (car feel):** hitting a banked slope should bump the car and push it to turn away; today the stability assists eat the natural Jolt deflection (yaw-damp kills the "unwanted" yaw, slide-align pulls the nose back, anti-roll flattens the body kick) so the car plows on-rails. Fix direction: reuse the existing `recoil_pulse()` relief pattern - when `vertical_jolt` (already computed for camera shake) or a lateral load spike crosses a threshold, open a short relief window on yaw-damp + slide-align + anti-roll so the physics deflection reads through, then fade assists back. No fake forces; only add an explicit contact-normal torque if relief alone is too subtle. Proposed 2026-07-05
-- [ ] **Run modifiers:** confirmed absent; after core loop is solid ([plan](../systems/modifiers.md))
+- [ ] **Flank enemy:** paces alongside the car in bursts, the honest "keeps up" enemy ([threat directions](../game/enemies.md))
+- [ ] **Remaining hazards:** falling rocks, flooded zone, collapsing floor, swinging obstacles
+- [ ] **Drone signal tether:** drone limited by signal range from the car, not battery; static/interference as it nears the edge
 - [ ] **Callout/ping system:** confirmed absent; gunner marks shortcuts and threats for the driver
+- [ ] **Run modifiers:** confirmed absent; after core loop is solid ([plan](../systems/modifiers.md))
 - [ ] **Boss rework:** benched; doesn't feel good yet, needs love before any route depends on it
-- [ ] **First landmark enemy (method-to-kill):** a one-of-a-kind, zone-specific encounter beaten by a *method*, not a health bar - e.g. harpoon-trip a tall quadruped then hit the exposed head, or lure it into a hazard ([Landmark Enemies & Bosses](../game/landmark-enemies.md)). Rides with the first authored zone
 
-## Level design
+## Car feel & rendering polish
 
-- [ ] **First authored zone (new level):** the garage's neighboring zone, built session-style: opening encounter, complication, fork, climax (set-piece, not boss), exit through a wall gate. round1_a is a tech demo, not the target ([World & Structure](../level-design/world-structure.md), [The Tunnels](../level-design/tunnels.md))
-- [ ] **Cavern lighting test:** one gray-box cavern: baked LightmapGI + volumetric fog + light shafts + distant emissives; proves the megalophobia works ([Setting & Scale](../level-design/setting-and-scale.md))
-- [ ] **Tunnel kit cross-section profile:** the one profile all modular pieces share; decide before modeling any kit piece
-- [ ] **Blockout kit pieces:** straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove
+- [ ] **Terrain-impact deflection (car feel):** hitting a banked slope should bump the car and push it to turn away; today the stability assists eat the natural Jolt deflection (yaw-damp kills the "unwanted" yaw, slide-align pulls the nose back, anti-roll flattens the body kick) so the car plows on-rails. Fix direction: reuse the existing `recoil_pulse()` relief pattern - when `vertical_jolt` (already computed for camera shake) or a lateral load spike crosses a threshold, open a short relief window on yaw-damp + slide-align + anti-roll so the physics deflection reads through, then fade assists back. No fake forces; only add an explicit contact-normal torque if relief alone is too subtle. Proposed 2026-07-05
 - [ ] **Fix square shadows:** smooth the turret meshes; if that's not enough, raise positional shadow atlas size / light softness
 - [ ] **Crisp car shadow (may need its own system):** the car wants a sharp, readable ground shadow up close; the shared positional shadow atlas isn't crisp enough at car scale. Likely warrants a dedicated approach - a high-res per-car shadow, or a stylised blob/contact shadow projected under the chassis - rather than leaning on the global atlas. Proposed 2026-07-09
 - [ ] **Working windshield wipers:** shader-driven, integrated into the `car_glass` grime layer - NOT a decal (a decal can't subtract the shader's procedural grime). Tier A: a `wiper_angle` uniform swept by a small controller script; the glass shader clears grime in the swept arc with a wet smear at the blade. Tier B (later): a SubViewport grime-accumulation buffer for real streaks and re-dirtying between passes. Physical blade mesh (model in Blender) rotates in sync off the same angle. Nice hook: driving through the swamp/mud dirties the glass so the wipers have a job. Proposed 2026-07-09
 - [ ] **Rework car interior materials (matte, not reflective):** the cabin materials read as reflective, which is wrong - real car interiors are matte plastic/fabric - and the shininess is likely fighting the GI. Rework the interior set to low-specular / high-roughness and test whether it lets SDFGI behave better inside the car. Needed regardless of the GI outcome. Proposed 2026-07-09
 
-### Scrapyard zone (in build - hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
+## Scrapyard zone (in build - hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
 
-- [ ] 🔨 **Junk blocks (nondescript compacted-metal bricks):** modeling now; deliberately not car-shaped - it's what a compactor actually spits out. Replaces the steel-cube placeholders in the block yard
 - [ ] **Crushed car cube + paint variants:** ~2.2x1.7x1.1 m crumpled box, one material slot named `CarCube` (name = the import-remap socket); faded red/blue/yellow/white paint over rust variants
 - [ ] **Row-builder tool:** give it a start/end line -> MultiMesh wall of stacked cubes with random variant/rotation/jitter; builds the graveyard rows and the shelter palisade
 - [ ] **Scatter tool:** "sprinkle N of prop X in this region / along this lane edge, seeded" -> MultiMesh; prerequisite for every dressing pass
 - [ ] **Lane-edge hero props, one at a time through the pipeline:** tire (single + stack) -> barrel/drum -> washing machine -> dumpster/container -> fridge. Free prototype models may stand in as scatter placeholders meanwhile; finals go through the pipeline (no photo textures)
 - [ ] **Landmarks:** compactor building + crane (possibly still running - sound + slow motion), weighbridge + booth at the plaza, shelter builds (shack, watchtower; palisade reuses car cubes)
-- [ ] **Gate module - build once, use 4x in every zone:** door slab, frame, and the open/closed light fixtures (the diegetic exit signal). In the scrapyard: N/E open, W barricaded by the shelter, S standing in raw ground with no road (never seen open)
 - [ ] **Dedicated dirt ground tile:** zone ground currently borrows the concrete roughness map for grain; bake a real dirt tile (pebbles, tire ruts on lanes)
 - [ ] **Zone-map channels G + B:** G = human footpaths (albedo wear only - feet don't compact terrain), B = burn-zone scorch tint. Mask generator writes RGB, ground shader reads them (hooks already documented in the shader)
 - [ ] **Burn zone dressing:** smoke columns, ember glow at the pits; ties into the fire-patch hazard when it exists
@@ -64,8 +78,6 @@ Conventions: `🔨` = in progress, `⛔` = blocked by a decision or another item
 
 ## Code health (from the July 2026 audit)
 
-- [ ] 🔨 **RPC sender validation on 4 input handlers:** running as background task; seat-shared controls (handbrake!) must keep working
-- [ ] 🔨 **Globals.DEBUG flag + gate 50+ prints:** running as background task
 - [ ] **Cache enemy target scans:** 5 enemy scripts call get_nodes_in_group every physics frame; horde_manager already shows the right pattern
 - [ ] **Centralize the RPC broadcast pattern:** the `call locally, then rpc_id to every world-ready peer` loop is copy-pasted ~10x across car.gd, door_controller.gd, seat_controller.gd, and most ability controllers. One shared `broadcast(method, args)` helper (autoload or a controller base class) would collapse them all and shrink every controller at once. **Handle with care:** RPC has bitten before - do it in its own session, one call site at a time, host+client test after each. Deliberately skipped during the 2026-07-05 car.gd split to keep that refactor RPC-neutral
 - [ ] **Split player.gd (car.gd half done + tested):** car.gd 1233 -> 912 landed 2026-07-05, multiplayer-tested same day. player.gd: the audit says don't split by size - extract the one misfit system, a **SeatCameraDirector** (seat entry/exit beziers, sway, wall-drive blend, ~300 lines -> player lands near 700). When next doing major camera work, not before
