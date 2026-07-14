@@ -54,6 +54,7 @@ nav:
       - Run Modifiers: systems/modifiers.md
   - Level Design:
       - World & Structure: level-design/world-structure.md
+      - World & Story: level-design/world-story.md
       - Setting & Vertical Scale: level-design/setting-and-scale.md
       - The Tunnels: level-design/tunnels.md
   - Project:
