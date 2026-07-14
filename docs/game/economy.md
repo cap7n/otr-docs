@@ -33,6 +33,8 @@ Terminal in the hub. Buy and sell. Item categories:
 
 Earned by selling loot. [Run modifiers](../systems/modifiers.md) will scale currency income (harder run = bigger multiplier).
 
+In fiction, what you're selling is **Pratina density** - the concentrated lived-in-ness the structure appraises, fed into a hacked salvager that credits you for it ([Pratina](../level-design/pratina.md), [World & Story](../level-design/world-story.md)).
+
 ## Open economic questions
 
 - **What do you lose on death?** Carried loot? Everything since the last hub visit? Nothing? This defines how much tension the run has. -> [Open Questions](../project/open-questions.md)

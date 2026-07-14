@@ -59,8 +59,8 @@ The car has HP, takes damage from enemies and hazards, and is repaired back in t
 
 Range = fuel. Scavenging isn't only about getting richer; it's **runway** - literally how much further you get to drive before the car is stranded ([World & Structure](../level-design/world-structure.md)). Fuel is meant to be the standing pressure behind the two seats' constant argument: *push on to the next zone, or turn back while we still can?*
 
-!!! warning "Undecided"
-    Where fuel actually *comes from* - bought, scavenged, or just a run timer - and what running dry does, isn't settled. See [Open Questions](../project/open-questions.md).
+!!! note "Fuel = refined Pratina"
+    Where fuel comes from is decided: it's **refined [Pratina](../level-design/pratina.md)** - bought through the salvager's resupply channel or scavenged from dense objects mid-run. What *running dry* does (strand mid-zone vs. end the run) is still a tuning detail ([Open Questions](../project/open-questions.md)).
 
 ## Making it yours: upgrades
 
