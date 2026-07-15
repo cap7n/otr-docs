@@ -60,6 +60,7 @@ nav:
       - The Tunnels: level-design/tunnels.md
   - Project:
       - Backlog: project/backlog.md
+      - String References Audit: project/string-references.md
       - Decision Log: project/decisions.md
       - Open Questions: project/open-questions.md
       - Roadmap: project/roadmap.md
