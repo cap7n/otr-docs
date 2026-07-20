@@ -1,0 +1,1832 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Design wiki for OTR, a 2-player co-op car game.">
+      
+      
+      
+        <link rel="canonical" href="https://cap7n.github.io/otr-docs/project/backlog/">
+      
+      
+        <link rel="prev" href="../../level-design/tunnels/">
+      
+      
+        <link rel="next" href="../decisions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Backlog - OTR Design Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#backlog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OTR Design Wiki" class="md-header__button md-logo" aria-label="OTR Design Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OTR Design Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Backlog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cap7n/otr-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OTR Design Wiki" class="md-nav__button md-logo" aria-label="OTR Design Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OTR Design Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cap7n/otr-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co-op-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-op Design Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/the-car/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Car
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/player-verbs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Players Can Do
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/weapons-combat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weapons & Combat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enemies
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Enemies
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/enemies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roster & Obstacles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/landmark-enemies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landmarks & Bosses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game/economy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Economy & Loot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems (Plans)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems (Plans)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/car-abilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Car Abilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sound & Engine Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/soundtrack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music & Soundtrack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/hazards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environmental Hazards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shortcut Paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/modifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run Modifiers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../level-design/world-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World & Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../level-design/world-story/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World & Story
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../level-design/pratina/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pratina
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../level-design/setting-and-scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting & Vertical Scale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../level-design/tunnels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Tunnels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#now-top-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Now — top priority
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-path-the-first-real-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical path: the first real run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-wins-code-exists-one-switch-away" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick wins (code exists, one switch away)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gameplay-systems-after-the-loop-grips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gameplay systems (after the loop grips)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#car-feel-rendering-polish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Car feel &amp; rendering polish
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrapyard-zone-in-build-hub_v2-is-the-test-bed-plan-lives-in-the-zone-map-terrainblockoutmoundsmaterials-landed-2026-07-07-see-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrapyard zone (in build - hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-health-from-the-july-2026-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code health (from the July 2026 audit)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#godot-47-aftercare-migration-succeeded-2026-07-05-log-clean-extensions-loaded-full-session-ran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Godot 4.7 aftercare (migration succeeded 2026-07-05 - log clean, extensions loaded, full session ran)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parked-someday-after-the-game-is-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parked (someday, after the game is fun)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Edit This Wiki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#now-top-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Now — top priority
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-path-the-first-real-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical path: the first real run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-wins-code-exists-one-switch-away" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick wins (code exists, one switch away)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gameplay-systems-after-the-loop-grips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gameplay systems (after the loop grips)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#car-feel-rendering-polish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Car feel &amp; rendering polish
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrapyard-zone-in-build-hub_v2-is-the-test-bed-plan-lives-in-the-zone-map-terrainblockoutmoundsmaterials-landed-2026-07-07-see-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrapyard zone (in build - hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-health-from-the-july-2026-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code health (from the July 2026 audit)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#godot-47-aftercare-migration-succeeded-2026-07-05-log-clean-extensions-loaded-full-session-ran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Godot 4.7 aftercare (migration succeeded 2026-07-05 - log clean, extensions loaded, full session ran)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parked-someday-after-the-game-is-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parked (someday, after the game is fun)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/cap7n/otr-docs/edit/main/docs/project/backlog.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="backlog">Backlog<a class="headerlink" href="#backlog" title="Permanent link">&para;</a></h1>
+<p>Things we've said <strong>yes</strong> to that aren't built yet. Not to be confused with <a href="../open-questions/">Open Questions</a> (undecided) or the <a href="../roadmap/">Roadmap</a> (the big-picture order). This is the working list: pick an item, build it, tag it Done.</p>
+<p><strong>How this page is ordered (2026-07-14 restructure):</strong> sections are sorted by how directly they lead to the first real, complete run - hub -&gt; authored zone -&gt; objective -&gt; home, with the pillar intact. <strong>Now</strong> is the short list; when it's empty, pull the next item up from <strong>Critical path</strong>. Everything else is grouped by kind, same as before.</p>
+<p><strong>Status tags:</strong> <span class="pill done">Done</span> shipped &middot; <span class="pill wip">WIP</span> in progress &middot; <span class="pill todo">Todo</span> not started &middot; <span class="pill blocked">Blocked</span> waiting on a decision or another item &middot; <span class="pill idea">Idea</span> undecided &middot; <span class="pill check">Check</span> may already be done.</p>
+<p><em>Statuses verified against code, 2026-07-04. If a doc and the code disagree, the code wins.</em></p>
+<h2 id="now-top-priority">Now — top priority<a class="headerlink" href="#now-top-priority" title="Permanent link">&para;</a></h2>
+<ol>
+<li><span class="pill todo">Todo</span> ⭐ <strong>Move the flamethrower and rocket pot to the co-pilot:</strong> both are built on the driver, but the combat split gives all damage to the co-pilot (<a href="../../game/weapons-combat/">Weapons &amp; Combat</a>). Resolve the contradiction in the pillar's favor. Decided 2026-07-14 (move from Open Questions to the <a href="../decisions/">Decision Log</a> when done).
+   <strong>Addendum - the one version that keeps rockets on the driver:</strong> rockets reframed as <em>path-clearing tools</em> - breakable gates, destructible walls - not enemy-killers. That makes them a driving verb (the driver shapes the road, the co-pilot shapes the fight) and doesn't break the no-damage rule, <em>as long as they do no meaningful enemy damage</em>. If they keep real DPS against enemies, they move to the co-pilot with the flamethrower.</li>
+<li><span class="pill wip">WIP</span> <strong>Junk blocks (nondescript compacted-metal bricks):</strong> modeling now; deliberately not car-shaped - it's what a compactor actually spits out. Replaces the steel-cube placeholders in the block yard</li>
+<li><span class="pill wip">WIP</span> <strong>RPC sender validation on 4 input handlers:</strong> running as background task; seat-shared controls (handbrake!) must keep working</li>
+<li><span class="pill wip">WIP</span> <strong>Globals.DEBUG flag + gate 50+ prints:</strong> running as background task</li>
+</ol>
+<h2 id="critical-path-the-first-real-run">Critical path: the first real run<a class="headerlink" href="#critical-path-the-first-real-run" title="Permanent link">&para;</a></h2>
+<p>The chain that turns "A-&gt;B works" into "a run worth repeating." Roughly in order; the Blocked items at the end need Open Question 1 (saving &amp; stakes) answered first.</p>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Wire an objective to return_gate.unlock():</strong> the gate already supports "locked until objective complete", nothing calls it yet; this is where the run's goal plugs in</li>
+<li><span class="pill todo">Todo</span> <strong>Gate countdown UI:</strong> logic done, TODOs in level_gate.gd and return_gate.gd are display-only</li>
+<li><span class="pill todo">Todo</span> <strong>Gate module - build once, use 4x in every zone:</strong> door slab, frame, and the open/closed light fixtures (the diegetic exit signal). In the scrapyard: N/E open, W barricaded by the shelter, S standing in raw ground with no road (never seen open)</li>
+<li><span class="pill todo">Todo</span> <strong>Diegetic exit signals:</strong> lights on zone walls (or similar in-world tells) showing which exits are open this cycle</li>
+<li><span class="pill todo">Todo</span> <strong>Tunnel kit cross-section profile:</strong> the one profile all modular pieces share; decide before modeling any kit piece</li>
+<li><span class="pill todo">Todo</span> <strong>Blockout kit pieces:</strong> straight, curves, squeeze, cavern shell, Y-junction, slope, portal, wall-drive ramp, alcove</li>
+<li><span class="pill todo">Todo</span> <strong>Cavern lighting test:</strong> one gray-box cavern: baked LightmapGI + volumetric fog + light shafts + distant emissives; proves the megalophobia works (<a href="../../level-design/setting-and-scale/">Setting &amp; Scale</a>)</li>
+<li><span class="pill todo">Todo</span> <strong>First authored zone (new level):</strong> the garage's neighboring zone, built session-style: opening encounter, complication, fork, climax (set-piece, not boss), exit through a wall gate. round1_a is a tech demo, not the target (<a href="../../level-design/world-structure/">World &amp; Structure</a>, <a href="../../level-design/tunnels/">The Tunnels</a>)</li>
+<li><span class="pill todo">Todo</span> <strong>First hazards: steam vent + fire patch:</strong> none of the six hazards exist in code (<a href="../../systems/hazards/">hazards plan</a>)</li>
+<li><span class="pill todo">Todo</span> <strong>First shortcut: destructible wall + side path:</strong> junk_barricade/locked_gate exist as main-path obstacles; the optional side-path variant doesn't (<a href="../../systems/shortcuts/">plan</a>)</li>
+<li><span class="pill todo">Todo</span> <strong>First landmark enemy (method-to-kill):</strong> a one-of-a-kind, zone-specific encounter beaten by a <em>method</em>, not a health bar - e.g. harpoon-trip a tall quadruped then hit the exposed head, or lure it into a hazard (<a href="../../game/landmark-enemies/">Landmark Enemies &amp; Bosses</a>). Rides with the first authored zone</li>
+<li><span class="pill todo">Todo</span> <strong>Interactable loot chest:</strong> opens on E, loot table, server-authoritative; no chest entity exists yet</li>
+<li><span class="pill todo">Todo</span> <strong>Save file:</strong> user:// ConfigFile autoload for currency + unlocks; confirmed absent, prerequisite for junker and modifier unlocks</li>
+<li><span class="pill todo">Todo</span> <strong>Battery leash:</strong> on-foot power timer (~30-60s), gray-screen desaturation as it fails, stumble back to the car to recharge (<a href="../../level-design/world-structure/">World &amp; Structure</a>)</li>
+<li><span class="pill blocked">Blocked</span> <strong>Junker package:</strong> unlock flags per ability controller (+ peer sync), CAR_MOD items, shop wiring; blocked on the saving/stakes decision (<a href="../open-questions/">open question 1</a>)</li>
+<li><span class="pill blocked">Blocked</span> <strong>What death costs (loot loss, repair costs):</strong> blocked on the saving/stakes decision</li>
+</ul>
+<h2 id="quick-wins-code-exists-one-switch-away">Quick wins (code exists, one switch away)<a class="headerlink" href="#quick-wins-code-exists-one-switch-away" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Re-enable wall-drive:</strong> controller is complete and wired, but <code>setup()</code> is commented out (car.gd:334). Re-enable, test Jolt gravity redirect on a ramp, then build zones in levels</li>
+<li><span class="pill todo">Todo</span> <strong>Re-enable drift:</strong> same story, complete controller, <code>setup()</code> commented out (car.gd:329)</li>
+<li><span class="pill todo">Todo</span> <strong>Wire visual wear to damage:</strong> the wear shader system (scratches/rust/dirt) is built and synced, but nothing increments it during gameplay; hook it to car damage events</li>
+</ul>
+<h2 id="gameplay-systems-after-the-loop-grips">Gameplay systems (after the loop grips)<a class="headerlink" href="#gameplay-systems-after-the-loop-grips" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Harpoon / tether tool (co-op combo enabler):</strong> co-pilot latches an enemy, the driver's cornering slings it into a wall or other enemies - the archetypal two-seat combo (<a href="../../co-op-design/">Co-op Design Principles</a>). Proposed 2026-07; no tether exists in code</li>
+<li><span class="pill todo">Todo</span> <strong>Flank enemy:</strong> paces alongside the car in bursts, the honest "keeps up" enemy (<a href="../../game/enemies/">threat directions</a>)</li>
+<li><span class="pill todo">Todo</span> <strong>Remaining hazards:</strong> falling rocks, flooded zone, collapsing floor, swinging obstacles</li>
+<li><span class="pill todo">Todo</span> <strong>Drone signal tether:</strong> drone limited by signal range from the car, not battery; static/interference as it nears the edge</li>
+<li><span class="pill todo">Todo</span> <strong>Callout/ping system:</strong> confirmed absent; gunner marks shortcuts and threats for the driver</li>
+<li><span class="pill todo">Todo</span> <strong>Run modifiers:</strong> confirmed absent; after core loop is solid (<a href="../../systems/modifiers/">plan</a>)</li>
+<li><span class="pill todo">Todo</span> <strong>Boss rework:</strong> benched; doesn't feel good yet, needs love before any route depends on it</li>
+</ul>
+<h2 id="car-feel-rendering-polish">Car feel &amp; rendering polish<a class="headerlink" href="#car-feel-rendering-polish" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Terrain-impact deflection (car feel):</strong> hitting a banked slope should bump the car and push it to turn away; today the stability assists eat the natural Jolt deflection (yaw-damp kills the "unwanted" yaw, slide-align pulls the nose back, anti-roll flattens the body kick) so the car plows on-rails. Fix direction: reuse the existing <code>recoil_pulse()</code> relief pattern - when <code>vertical_jolt</code> (already computed for camera shake) or a lateral load spike crosses a threshold, open a short relief window on yaw-damp + slide-align + anti-roll so the physics deflection reads through, then fade assists back. No fake forces; only add an explicit contact-normal torque if relief alone is too subtle. Proposed 2026-07-05</li>
+<li><span class="pill todo">Todo</span> <strong>Fix square shadows:</strong> smooth the turret meshes; if that's not enough, raise positional shadow atlas size / light softness</li>
+<li><span class="pill todo">Todo</span> <strong>Crisp car shadow (may need its own system):</strong> the car wants a sharp, readable ground shadow up close; the shared positional shadow atlas isn't crisp enough at car scale. Likely warrants a dedicated approach - a high-res per-car shadow, or a stylised blob/contact shadow projected under the chassis - rather than leaning on the global atlas. Proposed 2026-07-09</li>
+<li><span class="pill todo">Todo</span> <strong>Working windshield wipers:</strong> shader-driven, integrated into the <code>car_glass</code> grime layer - NOT a decal (a decal can't subtract the shader's procedural grime). Tier A: a <code>wiper_angle</code> uniform swept by a small controller script; the glass shader clears grime in the swept arc with a wet smear at the blade. Tier B (later): a SubViewport grime-accumulation buffer for real streaks and re-dirtying between passes. Physical blade mesh (model in Blender) rotates in sync off the same angle. Nice hook: driving through the swamp/mud dirties the glass so the wipers have a job. Proposed 2026-07-09</li>
+<li><span class="pill todo">Todo</span> <strong>Rework car interior materials (matte, not reflective):</strong> the cabin materials read as reflective, which is wrong - real car interiors are matte plastic/fabric - and the shininess is likely fighting the GI. Rework the interior set to low-specular / high-roughness and test whether it lets SDFGI behave better inside the car. Needed regardless of the GI outcome. Proposed 2026-07-09</li>
+</ul>
+<h2 id="scrapyard-zone-in-build-hub_v2-is-the-test-bed-plan-lives-in-the-zone-map-terrainblockoutmoundsmaterials-landed-2026-07-07-see-done">Scrapyard zone (in build - hub_v2 is the test bed; plan lives in the zone map, terrain/blockout/mounds/materials landed 2026-07-07, see Done)<a class="headerlink" href="#scrapyard-zone-in-build-hub_v2-is-the-test-bed-plan-lives-in-the-zone-map-terrainblockoutmoundsmaterials-landed-2026-07-07-see-done" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Crushed car cube + paint variants:</strong> ~2.2x1.7x1.1 m crumpled box, one material slot named <code>CarCube</code> (name = the import-remap socket); faded red/blue/yellow/white paint over rust variants</li>
+<li><span class="pill todo">Todo</span> <strong>Row-builder tool:</strong> give it a start/end line -&gt; MultiMesh wall of stacked cubes with random variant/rotation/jitter; builds the graveyard rows and the shelter palisade</li>
+<li><span class="pill todo">Todo</span> <strong>Scatter tool:</strong> "sprinkle N of prop X in this region / along this lane edge, seeded" -&gt; MultiMesh; prerequisite for every dressing pass</li>
+<li><span class="pill todo">Todo</span> <strong>Lane-edge hero props, one at a time through the pipeline:</strong> tire (single + stack) -&gt; barrel/drum -&gt; washing machine -&gt; dumpster/container -&gt; fridge. Free prototype models may stand in as scatter placeholders meanwhile; finals go through the pipeline (no photo textures)</li>
+<li><span class="pill todo">Todo</span> <strong>Landmarks:</strong> compactor building + crane (possibly still running - sound + slow motion), weighbridge + booth at the plaza, shelter builds (shack, watchtower; palisade reuses car cubes)</li>
+<li><span class="pill todo">Todo</span> <strong>Dedicated dirt ground tile:</strong> zone ground currently borrows the concrete roughness map for grain; bake a real dirt tile (pebbles, tire ruts on lanes)</li>
+<li><span class="pill todo">Todo</span> <strong>Zone-map channels G + B:</strong> G = human footpaths (albedo wear only - feet don't compact terrain), B = burn-zone scorch tint. Mask generator writes RGB, ground shader reads them (hooks already documented in the shader)</li>
+<li><span class="pill todo">Todo</span> <strong>Burn zone dressing:</strong> smoke columns, ember glow at the pits; ties into the fire-patch hazard when it exists</li>
+<li><span class="pill todo">Todo</span> <strong>Extraction scar at the dead-end road:</strong> the old intake road runs into the N wall mid-route; one hero object at the cut (sliced sign, half a truck) makes the story land</li>
+<li><span class="pill todo">Todo</span> <strong>Puddles in the low spots</strong> (existing puddle shader)</li>
+<li><span class="pill todo">Todo</span> <strong>Zone footprint rework:</strong> 2x2 km of pure yard reads too big. Direction: fenced yard core (~600-800 m, dense) + the extracted surroundings (access road, wasteland, shelter outside the fence) - fits the sampling fiction and gives a sparse-&gt;dense intensity gradient. Reshaping in progress</li>
+<li><span class="pill todo">Todo</span> <strong>Bake the pile scale factor into the mound prep tool</strong> once in-game testing locks it (current read: canyon piles ~20-25 m, sprinkles 8-12 m; proximity to the lane matters as much as height)</li>
+</ul>
+<h2 id="code-health-from-the-july-2026-audit">Code health (from the July 2026 audit)<a class="headerlink" href="#code-health-from-the-july-2026-audit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Cache enemy target scans:</strong> 5 enemy scripts call get_nodes_in_group every physics frame; horde_manager already shows the right pattern</li>
+<li><span class="pill todo">Todo</span> <strong>Centralize the RPC broadcast pattern:</strong> the <code>call locally, then rpc_id to every world-ready peer</code> loop is copy-pasted ~10x across car.gd, door_controller.gd, seat_controller.gd, and most ability controllers. One shared <code>broadcast(method, args)</code> helper (autoload or a controller base class) would collapse them all and shrink every controller at once. <strong>Handle with care:</strong> RPC has bitten before - do it in its own session, one call site at a time, host+client test after each. Deliberately skipped during the 2026-07-05 car.gd split to keep that refactor RPC-neutral</li>
+<li><span class="pill todo">Todo</span> <strong>Split player.gd (car.gd half done + tested):</strong> car.gd 1233 -&gt; 912 landed 2026-07-05, multiplayer-tested same day. player.gd: the audit says don't split by size - extract the one misfit system, a <strong>SeatCameraDirector</strong> (seat entry/exit beziers, sway, wall-drive blend, ~300 lines -&gt; player lands near 700). When next doing major camera work, not before</li>
+<li><span class="pill todo">Todo</span> <strong>Rate-limit inventory drag RPC:</strong> <code>_rpc_drag_move</code> fires every render frame while dragging (inventory_controller.gd:242) - 144+ RPCs/s on fast monitors. player.gd already shows the fix three lines from its own position sync: gate on physics frames to ~20 Hz</li>
+<li><span class="pill todo">Todo</span> <strong>Polled input bypasses in_ui_mode:</strong> drone_operator polls the mouse in _physics_process so turret fire ignores the UI gate that _unhandled_input respects; driver_controller same shape. Low impact today (UI + seat rarely overlap), fix when it first bites</li>
+<li><span class="pill todo">Todo</span> <strong>Characters chores from the 2026-07-05 audit:</strong> dead tail in player.gd <code>_process_seated</code> (<code>if not _is_local: return</code> with nothing after); <code>_cubic_bezier</code>/<code>_smoothstep</code> duplicated in player.gd + inventory_controller.gd; hardcoded KEY_I / KEY_O / ESC -&gt; input actions</li>
+<li><span class="pill todo">Todo</span> <strong>The last arrival-time stream (host-side player jitter):</strong> the client's on-foot position RPC bypasses NTM and the host stamps its snapshots with <code>local_time</code> = arrival time (player.gd <code>_rpc_send_position</code>) - the exact anti-pattern the tick-time system was built to kill. Predicts: host sees the client's droid slightly jittery at 20 Hz, client sees the host smoothly. Fix: client stamps a sequence number, host maps via a small per-stream baseline (like <code>get_tick_time</code> at 1/20 s spacing). <strong>Do this in a live two-machine session with A/B before/after</strong> - it touches the interpolation path</li>
+<li><span class="pill todo">Todo</span> <strong>Simplify car.gd's client-side speed derivation:</strong> now that the NTM keepalive is in and tested (see Done), the stale-sync workaround it was built for can likely be retired</li>
+<li><span class="pill todo">Todo</span> <strong>WorldManager run-complete "reset" doesn't reset:</strong> the clears in <code>request_return_to_hub</code> are immediately refilled by <code>_collect_carry_over()</code> in <code>_begin_transition</code> - the victory hub inherits car damage despite the visible intent. Decide: fresh start (add a skip-collect flag) or carry-over (delete the dead clears)</li>
+<li><span class="pill todo">Todo</span> <strong>Network spine chores (2026-07-05 audit):</strong> <code>interp_delay</code> is @export but <code>_ready()</code> overwrites it - Inspector value silently lies; NetId registry accumulates FREED entries across level transitions; crouch flag missing from player sync dict so remote players never play kneel_idle</li>
+<li><span class="pill todo">Todo</span> <strong>Phantom rocket smoke on the client (no rockets in flight):</strong> seen 2026-07-05 after a session with turret + rocket fire; smoke hangs at the launcher on the client only. Prime suspects exonerated by scene-file evidence (thrust/nitro/flames/muzzle all default-off or self-terminating). Leading hypothesis: ghost rocket - rockets are identified across peers by auto-numbered node path (rocket_pot_controller.gd:116 admits the invariant), but tracers/impact dust spawn into the same parent via UNRELIABLE <code>_rpc_fire_effects</code>; one dropped effects packet desyncs the auto-number counter, after which <code>_rpc_explode</code> + NTM sync target a path the client doesn't have -&gt; its rocket is never freed and lingers with VFX. Diagnostic next repro: client's Remote scene tree -&gt; look for a stray <code>Rocket</code>/<code>@Rocket@N</code> node the host doesn't have. Fix direction: identify rockets via NetId (autoload already exists) instead of path determinism, and/or stop spawning one-shot effects into the same auto-number namespace</li>
+<li><span class="pill todo">Todo</span> <strong>Turret aim RPC is per-mouse-event unreliable:</strong> minor smell left over from the (fixed) turret jitter - gunner input deltas fire one unreliable RPC per InputEventMouseMotion, which can burst at mouse polling rate; batch per physics tick when convenient</li>
+<li><span class="pill todo">Todo</span> <strong>lobby.gd is binary to git:</strong> 72 trailing null bytes (torn-write artifact) make git classify it as binary - no readable diffs for lobby.gd ever. Strip the padding (byte-truncate, zero logic change), commit, diffs come back. Drone audit 2026-07-05 verdict otherwise: distributed authority implemented properly (velocity-inheriting handoff, transfer-race guard, disconnect reverts to host); only chore is the vestigial gimbal_yaw sync field + dead Edge Yaw export group in drone2.gd</li>
+<li><span class="pill todo">Todo</span> <strong>Fix <code>:=</code> typing violations:</strong> mostly road_generator.gd (33) and terrain_conform.gd (15)</li>
+</ul>
+<h2 id="godot-47-aftercare-migration-succeeded-2026-07-05-log-clean-extensions-loaded-full-session-ran">Godot 4.7 aftercare (migration succeeded 2026-07-05 - log clean, extensions loaded, full session ran)<a class="headerlink" href="#godot-47-aftercare-migration-succeeded-2026-07-05-log-clean-extensions-loaded-full-session-ran" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Re-save car.tscn:</strong> 4.7 reimport of Car.blend triggers a scene "recovery process" on every load; also check the orphaned <code>Car mesh/Vent</code> override ("modified from inside an instance, but it has vanished")</li>
+<li><span class="pill todo">Todo</span> <strong>NTM burst overflows MTU (1524 &gt; 1392 bytes unreliable):</strong> all entities go dirty on the same tick (level spawn; the keepalive repeats the burst each second) and the 80-byte-per-entity estimate undershoots. Stagger keepalive phase per entity (hash of path) + raise estimate to ~110</li>
+<li><span class="pill todo">Todo</span> <strong>kneel_idle animation not found:</strong> crouch falls back to pistol_idle. Check the Ybot AnimationPlayer list - the 4.7 reimport may have renamed it; else it never existed and crouch was never animated</li>
+<li><span class="pill todo">Todo</span> <strong><code>reset_physics_interpolation()</code> deprecated in 4.7:</strong> works but warns; look up the blessed replacement in the 4.7 docs, then mechanical rename across player/drone/turret/rocket/car call sites</li>
+</ul>
+<h2 id="chores">Chores<a class="headerlink" href="#chores" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Finish the hub_v2 shell material swap:</strong> point floor and ceiling at their mega_concrete_v2 .tres (wall done 2026-07-06); clear the leftover v1-shader <code>next_pass</code> on the wall material if still present</li>
+<li><span class="pill todo">Todo</span> <strong>Delete old pipe assets</strong> once the pipe_outfall instance in hub_v2 is replaced by mega_pipe_v2: <code>pipe_outfall.tscn</code>, <code>BigPipeWithWater.blend</code> (+.import), <code>pipe_outer/pipe_inside.tres</code>, <code>textures/PipeOutfall/</code> (pre-texture backup lives in Desktop/OTR/Backups)</li>
+<li><span class="pill todo">Todo</span> <strong>Retire mega_concrete.gdshader (v1)</strong> when no surface references it - the comparison reference wall still uses it today</li>
+<li><span class="pill blocked">Blocked</span> <strong>Project stretch mode:</strong> add window/stretch canvas_items + expand to project.godot; waiting until the background code sessions land, then glance over every UI scene once</li>
+<li><span class="pill todo">Todo</span> <strong>Rename schop_screen.tscn -&gt; shop_screen_panel or similar:</strong> editor rename so references update</li>
+<li><span class="pill todo">Todo</span> <strong>Remove level_test_texutures from world.tscn:</strong> editor; drags an 11 MB collision shape with it</li>
+<li><span class="pill todo">Todo</span> <strong>External_Carp terrain pack decision:</strong> 49 MB, unknown licence, no references found; verify Terrain3D doesn't need it, then delete</li>
+<li><span class="pill todo">Todo</span> <strong>Delete Audio/Recall.mp3 if unused:</strong> verify in editor first</li>
+</ul>
+<h2 id="parked-someday-after-the-game-is-fun">Parked (someday, after the game is fun)<a class="headerlink" href="#parked-someday-after-the-game-is-fun" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="pill todo">Todo</span> <strong>Rebuild menu visuals:</strong> menu was stripped to bare buttons (2026-07) after the 52 MB embedded 3D showcase broke layout and dragged netcode into the menu. Design a proper look when the game underneath deserves it</li>
+<li><span class="pill todo">Todo</span> <strong>Intro sequence:</strong> two droids wake low-battery in a garbage dump, gray screen, stumble to the garage, plug in, world blooms to color (<a href="../../level-design/world-structure/">World &amp; Structure</a>). Build after the battery leash exists (it reuses the same gray-screen system)</li>
+</ul>
+<h2 id="done">Done<a class="headerlink" href="#done" title="Permanent link">&para;</a></h2>
+<p><em>(Move done items here with a date, it feels good and it's useful history.)</em></p>
+<ul>
+<li>
+<p><span class="pill done">Done</span> 2026-07-07: <strong>Scrapyard zone build started (hub_v2 as test bed).</strong> Zone plan map: workflow-worn roads (truck arterial, service loop, desire-path corner cuts, filleted junctions) in two generations - the yard's historical network dead-ends at the N wall where the extraction cut it, plus straight bulldozed connectors to the megastructure gates. Built: heightfield floor generator (2 m grid, one HeightMapShape3D collider, seeded noise, road flatten-mask so terrain and roads can never disagree), mask rasterizer from the plan, colored per-section blockout, six sculpted trash mounds through a prep tool (decimate + collision twin + canonical height) placed as the scrap mountains, scrap-mass tileable material (junk cells, rare paint chips, world-triplanar so instance scaling is safe) with a macro-mottle detail layer against tiling repetition, and a zone ground shader blending packed road dirt vs yard dirt from the same mask that shapes the terrain</p>
+</li>
+<li>
+<p><span class="pill done">Done</span> 2026-07-06: <strong>Blender-&gt;Godot asset pipeline built and proven</strong> (<code>Desktop/OTR Assets</code>: procedural material scripts, lookdev blends with preview renders, tileable + per-object bakers). Two assets shipped same day: <strong>MegaPipeV2</strong> (weathered metal + rust, flowing-water shader untouched, materials remapped by name in .import) and <strong>shell concrete v2</strong> (baked tile + slim hybrid shader: per-panel tint/mirror-flip, macro patches, floor grime, close-up detail bump). Killed the 2 km shimmering-lines wall artifact (procedural math can't be mip-filtered) and the inverted wall lighting (RGTC-compressed normal maps drop the blue channel - shader now reconstructs it)</p>
+</li>
+<li>
+<p><span class="pill done">Done</span> 2026-07-05: <strong>"Phantom .blend rewrites" investigated -&gt; no phantom.</strong> Every blend change was the partner's genuine Blender work (autosmooth etc.) arriving via pull; the "I pushed a file I didn't touch" impression was GitHub Desktop showing pulled commits + pull-merge commits alongside your own push. Lesson: check the AUTHOR column before assuming a commit is yours - <code>git log --format="%h %an %s"</code> settles it in seconds</p>
+</li>
+<li>
+<p><span class="pill done">Done</span> 2026-07-05: <strong>Session sweep, all multiplayer-tested same day:</strong> car.gd split (1233 -&gt; 912; doors/cargo, seats/interact, audio, drone dock -&gt; controller nodes, RPC paths unchanged), two player.gd multiplayer bugs (remote collision shape stuck disabled after seat exit; shared crouch capsule - also retro-solved the old "player sunk in the ground after crouch" mystery), NTM keepalive for dropped rest-state packets, turret jitter on host (raw vs interpolated pivot mix in barrels/convergence - diagnosed, predicted, confirmed in-session, fixed)</p>
+</li>
+<li>
+<p><span class="pill done">Done</span> Already built (confirmed by code audit 2026-07-04): <strong>nitro boost</strong> (3 charges, exhaust VFX), <strong>car jump</strong> (Q, dust VFX), <strong>flamethrower</strong> (fuel system, 50 DPS), <strong>rocket pot</strong> (4-tube launcher), <strong>rocket thrust</strong> (charge-based, phased burn), <strong>stasis cargo lock</strong>, <strong>level/return gates</strong> (incl. objective unlock hook), <strong>horde manager</strong> (ghost promotion/demotion by distance), <strong>wear shader</strong> (visual side), <strong>item behaviors</strong> (armor plate, repair kit, bomb)</p>
+</li>
+<li><span class="pill done">Done</span> 2026-07: Git history rewrite: 1,078 MB of ghost blobs stripped (old hub/menu/world versions), 1.2 GB -&gt; 626 MB, current files bit-identical, full backup bundle in Backups. Verified on both machines after re-clone; commit history reads under dev names only</li>
+<li><span class="pill done">Done</span> 2026-07: Audit branch tested in-game and merged into main (4 commits: junk removal, 170 orphans, menu strip)</li>
+<li><span class="pill done">Done</span> 2026-07: Main menu stripped and rebuilt as clean scene (52 MB -&gt; 2 KB); layout bug fixed, car/drone netcode removed from menu</li>
+<li><span class="pill done">Done</span> 2026-07: Design wiki built and live at cap7n.github.io/otr-docs</li>
+<li><span class="pill done">Done</span> 2026-07: Full project audit; 170 dead files removed on <code>audit/2026-07-cleanup</code></li>
+<li><span class="pill done">Done</span> 2026-07: Start/end zone gates confirmed working (A-&gt;B-&gt;hub loop closed)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../level-design/tunnels/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Tunnels">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                The Tunnels
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../decisions/" class="md-footer__link md-footer__link--next" aria-label="Next: Decision Log">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Decision Log
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
